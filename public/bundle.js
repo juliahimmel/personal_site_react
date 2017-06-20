@@ -24848,25 +24848,89 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var AllProjects = __webpack_require__(217);
 
 	var Main = React.createClass({
 	  displayName: 'Main',
 
+	  getInitialState: function getInitialState() {
+	    return {
+	      projects: [{
+	        id: 1,
+	        title: 'Tattle App',
+	        subtitle: 'Some subtitle',
+	        shortDescription: 'A Short Description',
+	        longDescription: 'A Long Description',
+	        images: []
+	      }]
+	    };
+	  },
 	  render: function render() {
+	    var projects = this.state.projects;
+
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        'h1',
-	        null,
-	        'Julia Himmel'
-	      )
+	      React.createElement(AllProjects, { projects: projects })
 	    );
 	  }
 
 	});
 
 	module.exports = Main;
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Project = __webpack_require__(218);
+
+	var AllProjects = React.createClass({
+	  displayName: 'AllProjects',
+
+	  render: function render() {
+	    var projects = this.props.projects;
+
+	    var renderProjects = function renderProjects() {
+	      return projects.map(function (project) {
+	        return React.createElement(Project, { key: project.id });
+	      });
+	    };
+
+	    return React.createElement(
+	      'div',
+	      null,
+	      renderProjects()
+	    );
+	  }
+	});
+
+	module.exports = AllProjects;
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Project = React.createClass({
+	  displayName: 'Project',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      'Test'
+	    );
+	  }
+	});
+
+	module.exports = Project;
 
 /***/ })
 /******/ ]);
