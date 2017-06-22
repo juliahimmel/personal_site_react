@@ -2,9 +2,11 @@ var React = require('react');
 
 var Project = React.createClass({
   render: function () {
+    var {id, title} = this.props;
     return (
       <div>
-        Test
+        {id}
+        {title}
       </div>
     )
   }

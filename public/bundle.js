@@ -24862,6 +24862,13 @@
 	        shortDescription: 'A Short Description',
 	        longDescription: 'A Long Description',
 	        images: []
+	      }, {
+	        id: 2,
+	        title: 'Second Project',
+	        subtitle: 'Some subtitle two',
+	        shortDescription: 'A Short Description two',
+	        longDescription: 'A Long Description two',
+	        images: []
 	      }]
 	    };
 	  },
@@ -24885,6 +24892,8 @@
 
 	'use strict';
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var React = __webpack_require__(1);
 	var Project = __webpack_require__(218);
 
@@ -24896,7 +24905,7 @@
 
 	    var renderProjects = function renderProjects() {
 	      return projects.map(function (project) {
-	        return React.createElement(Project, { key: project.id });
+	        return React.createElement(Project, _extends({ key: project.id }, project));
 	      });
 	    };
 
@@ -24922,10 +24931,15 @@
 	  displayName: 'Project',
 
 	  render: function render() {
+	    var _props = this.props,
+	        id = _props.id,
+	        title = _props.title;
+
 	    return React.createElement(
 	      'div',
 	      null,
-	      'Test'
+	      id,
+	      title
 	    );
 	  }
 	});

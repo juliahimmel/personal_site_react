@@ -7,7 +7,7 @@ var AllProjects = React.createClass({
     var renderProjects = () => {
       return projects.map((project) => {
         return (
-          <Project key={project.id}/>
+          <Project key={project.id} {...project} />
         )
       })
     };

@@ -12,6 +12,14 @@ var Main = React.createClass({
           shortDescription: 'A Short Description',
           longDescription: 'A Long Description',
           images: []
+        },
+        {
+          id: 2,
+          title: 'Second Project',
+          subtitle: 'Some subtitle two',
+          shortDescription: 'A Short Description two',
+          longDescription: 'A Long Description two',
+          images: []
         }
       ]
     };
