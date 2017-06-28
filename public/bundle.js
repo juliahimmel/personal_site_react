@@ -62,8 +62,15 @@
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { hash: hashHistory },
-	  React.createElement(Route, { path: '/', component: Main }),
-	  React.createElement(Route, { path: '/projects/:id', component: OneProject })
+	  React.createElement(
+	    Route,
+	    { path: '/', component: Main },
+	    React.createElement(
+	      Route,
+	      { path: '/projects' },
+	      React.createElement(Route, { path: '/projects/:id', component: OneProject })
+	    )
+	  )
 	), document.getElementById('app'));
 
 /***/ }),
@@ -24952,7 +24959,7 @@
 	      title,
 	      React.createElement(
 	        Link,
-	        { to: '/projects/' + id },
+	        { to: { pathname: '/projects/' + id, hash: this.props } },
 	        'TestLink'
 	      )
 	    );
@@ -24960,6 +24967,8 @@
 	});
 
 	module.exports = Project;
+
+	// {"history":{},"location":{"pathname":"/projects/2","search":"","hash":"","state":null,"action":"POP","key":"pg6y26","query":{},"$searchBase":{"search":"","searchBase":""}},"params":{"id":"2"},"route":{"path":"/projects/:id"},"routeParams":{"id":"2"},"routes":[{"path":"/projects/:id"}],"children":null}
 
 /***/ }),
 /* 219 */
@@ -24988,8 +24997,14 @@
 	    React.createElement(
 	      'h3',
 	      null,
-	      'ID: ',
+	      'props: ',
 	      JSON.stringify(props)
+	    ),
+	    React.createElement(
+	      'h4',
+	      null,
+	      'props: ',
+	      JSON.stringify(undefined.props)
 	    )
 	  );
 	};

@@ -14,7 +14,9 @@ var React = require('react');
 
 const OneProject = (props) => (
   <div>
-    <h3>ID: {JSON.stringify(props)}</h3>
+    <h3>props: {JSON.stringify(props)}</h3>
+    <h4>props: {JSON.stringify(this.props)}</h4>
+    {/* <h4>hash: {props.location.hash}</h4> */}
   </div>
 )
 

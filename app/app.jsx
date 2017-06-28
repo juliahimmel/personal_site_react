@@ -6,8 +6,11 @@ var OneProject = require('OneProject');
 
 ReactDOM.render(
   <Router hash={hashHistory}>
-    <Route path="/" component={Main}/>
-    <Route path='/projects/:id' component={OneProject}/>
+    <Route path='/' component={Main}>
+      <Route path='/projects'>
+        <Route path='/projects/:id' component={OneProject}/>
+      </Route>
+    </Route>
   </Router>,
   document.getElementById('app')
 );
