@@ -1,4 +1,5 @@
 var React = require('react');
+var {Route, Router, IndexRoute, hashHistory, Link} = require('react-router');
 
 var Project = React.createClass({
   render: function () {
@@ -7,6 +8,8 @@ var Project = React.createClass({
       <div>
         {id}
         {title}
+        <Link to={`/projects/${id}`} >TestLink</Link>
+
       </div>
     )
   }

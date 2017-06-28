@@ -53,14 +53,17 @@
 	    Route = _require.Route,
 	    Router = _require.Router,
 	    IndexRoute = _require.IndexRoute,
-	    hashHistory = _require.hashHistory;
+	    hashHistory = _require.hashHistory,
+	    Link = _require.Link;
 
 	var Main = __webpack_require__(216);
+	var OneProject = __webpack_require__(219);
 
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { hash: hashHistory },
-	  React.createElement(Route, { path: '/', component: Main })
+	  React.createElement(Route, { path: '/', component: Main }),
+	  React.createElement(Route, { path: '/projects/:id', component: OneProject })
 	), document.getElementById('app'));
 
 /***/ }),
@@ -24927,6 +24930,13 @@
 
 	var React = __webpack_require__(1);
 
+	var _require = __webpack_require__(159),
+	    Route = _require.Route,
+	    Router = _require.Router,
+	    IndexRoute = _require.IndexRoute,
+	    hashHistory = _require.hashHistory,
+	    Link = _require.Link;
+
 	var Project = React.createClass({
 	  displayName: 'Project',
 
@@ -24939,12 +24949,66 @@
 	      'div',
 	      null,
 	      id,
-	      title
+	      title,
+	      React.createElement(
+	        Link,
+	        { to: '/projects/' + id },
+	        'TestLink'
+	      )
 	    );
 	  }
 	});
 
 	module.exports = Project;
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	// var OneProject = React.createClass({
+	//   render: function () {
+	//     // var {id, title} = this.props;
+	//     return (
+	//       <div>
+	//         {id}
+	//         {title}
+	//       </div>
+	//     )
+	//   }
+	// })
+
+	var OneProject = function OneProject(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'h3',
+	      null,
+	      'ID: ',
+	      JSON.stringify(props)
+	    )
+	  );
+	};
+
+	// const Player = (props) => {
+	//   const player = PlayerAPI.get(
+	//     parseInt(props.match.params.number, 10)
+	//   )
+	//   if (!player) {
+	//     return <div>Sorry, but the player was not found</div>
+	//   }
+	//   return (
+	//     <div>
+	//       <h1>{player.name} (#{player.number})</h1>
+	//       <h2>{player.position}</h2>
+	//     </div>
+	// )
+
+	module.exports = OneProject;
 
 /***/ })
 /******/ ]);
