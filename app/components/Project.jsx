@@ -8,7 +8,7 @@ var Project = React.createClass({
       <div>
         {id}
         {title}
-        <Link to={ {pathname: `/projects/${id}`, hash: this.props} } >TestLink</Link>
+        <Link to={ {pathname: `/projects/${id}`} } >TestLink</Link>
       </div>
     )
   }
