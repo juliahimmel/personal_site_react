@@ -1,12 +1,14 @@
 var React = require('react');
 var Project = require('Project');
 var OneProject = require('OneProject');
+var projects = require('app/data/projects.js');
 
 var AllProjects = React.createClass({
   render: function () {
-    var {projects} = this.props;
+
+    var projectsArray = projects.default.projects;
     var renderProjects = () => {
-      return projects.map((project) => {
+      return projectsArray.map((project) => {
         return (
           <div>
             <Project key={project.id} {...project} />
@@ -18,7 +20,6 @@ var AllProjects = React.createClass({
     return (
       <div>
         {renderProjects()}
-        {this.props.children}
       </div>
     )
   }

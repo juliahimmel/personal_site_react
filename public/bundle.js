@@ -54,22 +54,18 @@
 	    Router = _require.Router,
 	    IndexRoute = _require.IndexRoute,
 	    hashHistory = _require.hashHistory,
-	    Link = _require.Link,
-	    Switch = _require.Switch;
+	    Link = _require.Link;
 
 	var Main = __webpack_require__(216);
-	var AllProjects = __webpack_require__(217);
+	var AllProjects = __webpack_require__(220);
 	var OneProject = __webpack_require__(219);
-	var Projects = __webpack_require__(220);
 
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { hash: hashHistory },
-	  React.createElement(
-	    Route,
-	    { path: '/', component: Main },
-	    React.createElement(Route, { path: '/projects', component: Projects })
-	  )
+	  React.createElement(Route, { path: '/', component: Main }),
+	  React.createElement(Route, { path: '/projects', component: AllProjects }),
+	  React.createElement(Route, { path: '/projects/:id', component: OneProject })
 	), document.getElementById('app'));
 
 /***/ }),
@@ -24857,18 +24853,22 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var AllProjects = __webpack_require__(217);
 
 	var Main = React.createClass({
 	  displayName: 'Main',
 
 
 	  render: function render() {
+	    var props = this.props;
 
 	    return React.createElement(
 	      'div',
 	      null,
-	      this.props.children
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Hello there, this is Main'
+	      )
 	    );
 	  }
 
@@ -24877,45 +24877,7 @@
 	module.exports = Main;
 
 /***/ }),
-/* 217 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var React = __webpack_require__(1);
-	var Project = __webpack_require__(218);
-	var OneProject = __webpack_require__(219);
-
-	var AllProjects = React.createClass({
-	  displayName: 'AllProjects',
-
-	  render: function render() {
-	    var projects = this.props.projects;
-
-	    var renderProjects = function renderProjects() {
-	      return projects.map(function (project) {
-	        return React.createElement(
-	          'div',
-	          null,
-	          React.createElement(Project, _extends({ key: project.id }, project))
-	        );
-	      });
-	    };
-
-	    return React.createElement(
-	      'div',
-	      null,
-	      renderProjects(),
-	      this.props.children
-	    );
-	  }
-	});
-
-	module.exports = AllProjects;
-
-/***/ }),
+/* 217 */,
 /* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24954,8 +24916,6 @@
 
 	module.exports = Project;
 
-	// {"history":{},"location":{"pathname":"/projects/2","search":"","hash":"","state":null,"action":"POP","key":"pg6y26","query":{},"$searchBase":{"search":"","searchBase":""}},"params":{"id":"2"},"route":{"path":"/projects/:id"},"routeParams":{"id":"2"},"routes":[{"path":"/projects/:id"}],"children":null}
-
 /***/ }),
 /* 219 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -24963,20 +24923,14 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-
-	// var OneProject = React.createClass({
-	//   render: function () {
-	//     // var {id, title} = this.props;
-	//     return (
-	//       <div>
-	//         {id}
-	//         {title}
-	//       </div>
-	//     )
-	//   }
-	// })
+	var projects = __webpack_require__(221);
 
 	var OneProject = function OneProject(props) {
+	  var projectId = parseInt(props.params.id);
+	  var _projects$default$pro = projects.default.projects[projectId],
+	      id = _projects$default$pro.id,
+	      title = _projects$default$pro.title;
+
 	  return React.createElement(
 	    'div',
 	    null,
@@ -24984,23 +24938,26 @@
 	      'h1',
 	      null,
 	      'Hello'
+	    ),
+	    React.createElement(
+	      'h3',
+	      null,
+	      'props: ',
+	      JSON.stringify(props)
+	    ),
+	    React.createElement(
+	      'h3',
+	      null,
+	      'ID: ',
+	      JSON.stringify(props.params.id)
+	    ),
+	    React.createElement(
+	      'h4',
+	      null,
+	      title
 	    )
 	  );
 	};
-
-	// const Player = (props) => {
-	//   const player = PlayerAPI.get(
-	//     parseInt(props.match.params.number, 10)
-	//   )
-	//   if (!player) {
-	//     return <div>Sorry, but the player was not found</div>
-	//   }
-	//   return (
-	//     <div>
-	//       <h1>{player.name} (#{player.number})</h1>
-	//       <h2>{player.position}</h2>
-	//     </div>
-	// )
 
 	module.exports = OneProject;
 
@@ -25010,59 +24967,67 @@
 
 	'use strict';
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var React = __webpack_require__(1);
 	var Project = __webpack_require__(218);
 	var OneProject = __webpack_require__(219);
-	var AllProjects = __webpack_require__(217);
+	var projects = __webpack_require__(221);
 
-	var _require = __webpack_require__(159),
-	    Route = _require.Route,
-	    Router = _require.Router,
-	    IndexRoute = _require.IndexRoute,
-	    hashHistory = _require.hashHistory,
-	    Link = _require.Link,
-	    Switch = _require.Switch;
+	var AllProjects = React.createClass({
+	  displayName: 'AllProjects',
 
-	var Projects = React.createClass({
-	  displayName: 'Projects',
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      projects: [{
-	        id: 1,
-	        title: 'Tattle App',
-	        subtitle: 'Some subtitle',
-	        shortDescription: 'A Short Description',
-	        longDescription: 'A Long Description',
-	        images: []
-	      }, {
-	        id: 2,
-	        title: 'Second Project',
-	        subtitle: 'Some subtitle two',
-	        shortDescription: 'A Short Description two',
-	        longDescription: 'A Long Description two',
-	        images: []
-	      }]
-	    };
-	  },
 	  render: function render() {
-	    var projects = this.state.projects;
 
+	    var projectsArray = projects.default.projects;
+	    var renderProjects = function renderProjects() {
+	      return projectsArray.map(function (project) {
+	        return React.createElement(
+	          'div',
+	          null,
+	          React.createElement(Project, _extends({ key: project.id }, project))
+	        );
+	      });
+	    };
 
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        Switch,
-	        null,
-	        React.createElement(Route, { path: '/projects', component: AllProjects }),
-	        React.createElement(Route, { path: '/projects/:id', component: OneProject })
-	      )
+	      renderProjects()
 	    );
 	  }
 	});
 
-	module.exports = Projects;
+	module.exports = AllProjects;
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var React = __webpack_require__(1);
+
+	exports.default = {
+	  projects: [{
+	    id: 0,
+	    title: 'Tattle App',
+	    subtitle: 'Some subtitle',
+	    shortDescription: 'A Short Description',
+	    longDescription: 'A Long Description',
+	    images: []
+	  }, {
+	    id: 1,
+	    title: 'Second Project',
+	    subtitle: 'Some subtitle two',
+	    shortDescription: 'A Short Description two',
+	    longDescription: 'A Long Description two',
+	    images: []
+	  }]
+	};
 
 /***/ })
 /******/ ]);

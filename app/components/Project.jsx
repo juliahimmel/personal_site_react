@@ -15,5 +15,3 @@ var Project = React.createClass({
 })
 
 module.exports = Project;
-
-// {"history":{},"location":{"pathname":"/projects/2","search":"","hash":"","state":null,"action":"POP","key":"pg6y26","query":{},"$searchBase":{"search":"","searchBase":""}},"params":{"id":"2"},"route":{"path":"/projects/:id"},"routeParams":{"id":"2"},"routes":[{"path":"/projects/:id"}],"children":null}

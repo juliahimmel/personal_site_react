@@ -1,16 +1,15 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory, Link, Switch} = require('react-router');
+var {Route, Router, IndexRoute, hashHistory, Link} = require('react-router');
 var Main = require('Main');
 var AllProjects = require('AllProjects');
 var OneProject = require('OneProject');
-var Projects = require('Projects');
 
 ReactDOM.render(
   <Router hash={hashHistory}>
-    <Route path='/' component={Main} >
-      <Route path='/projects' component={Projects}/>
-    </Route>
+    <Route path='/' component={Main} />
+    <Route path='/projects' component={AllProjects}/>
+    <Route path='/projects/:id' component={OneProject}/>
   </Router>,
   document.getElementById('app')
 );

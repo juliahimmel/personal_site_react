@@ -1,13 +1,13 @@
 var React = require('react');
-var AllProjects = require('AllProjects');
 
 var Main = React.createClass({
 
   render: function() {
+    var props = this.props;
 
     return (
       <div>
-        {this.props.children}
+        <h1>Hello there, this is Main</h1>
       </div>
     );
   }
