@@ -25512,10 +25512,6 @@
 	var React = __webpack_require__(1);
 
 	var _require = __webpack_require__(159),
-	    Route = _require.Route,
-	    Router = _require.Router,
-	    IndexRoute = _require.IndexRoute,
-	    hashHistory = _require.hashHistory,
 	    Link = _require.Link;
 
 	var SplashPageNav = React.createClass({
@@ -25593,12 +25589,8 @@
 	var React = __webpack_require__(1);
 
 	var _require = __webpack_require__(159),
-	    Route = _require.Route,
-	    Router = _require.Router,
-	    IndexRoute = _require.IndexRoute,
-	    hashHistory = _require.hashHistory,
 	    Link = _require.Link,
-	    browserHistory = _require.browserHistory;
+	    IndexLink = _require.IndexLink;
 
 	var ProjectsNav = React.createClass({
 	  displayName: 'ProjectsNav',
@@ -25616,6 +25608,15 @@
 	      React.createElement(
 	        'ul',
 	        null,
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            IndexLink,
+	            { to: '/' },
+	            'Julia Himmel'
+	          )
+	        ),
 	        React.createElement(
 	          'li',
 	          null,

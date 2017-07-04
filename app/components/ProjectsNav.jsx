@@ -1,6 +1,5 @@
 var React = require('react');
-var {Route, Router, IndexRoute, hashHistory, Link, browserHistory} = require('react-router');
-
+var {Link, IndexLink} = require('react-router');
 
 var ProjectsNav = React.createClass({
   render: function () {
@@ -9,6 +8,7 @@ var ProjectsNav = React.createClass({
       <div>
         <h2>Projects Nav</h2>
         <ul>
+          <li><IndexLink to='/'>Julia Himmel</IndexLink></li>
           <li><Link to='/projects'>Projects</Link></li>
         </ul>
       </div>

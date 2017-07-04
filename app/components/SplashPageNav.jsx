@@ -1,6 +1,6 @@
 var React = require('react');
 
-var {Route, Router, IndexRoute, hashHistory, Link} = require('react-router');
+var {Link} = require('react-router');
 
 var SplashPageNav = React.createClass({
   render: function () {
