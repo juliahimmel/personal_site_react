@@ -8,6 +8,7 @@ var Main = React.createClass({
     return (
       <div>
         <h1>Hello there, this is Main</h1>
+        {this.props.children}
       </div>
     );
   }

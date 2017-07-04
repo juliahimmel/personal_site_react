@@ -58,15 +58,25 @@
 	    browserHistory = _require.browserHistory;
 
 	var Main = __webpack_require__(220);
+	var SplashPage = __webpack_require__(225);
+	var Projects = __webpack_require__(227);
 	var AllProjects = __webpack_require__(221);
 	var OneProject = __webpack_require__(223);
 
 	ReactDOM.render(React.createElement(
 	  Router,
-	  { history: hashHistory },
-	  React.createElement(Route, { path: '/', component: Main }),
-	  React.createElement(Route, { path: '/projects', component: AllProjects }),
-	  React.createElement(Route, { path: '/projects/:id', component: OneProject })
+	  { history: browserHistory },
+	  React.createElement(
+	    Route,
+	    { path: '/', component: Main },
+	    React.createElement(IndexRoute, { component: SplashPage }),
+	    React.createElement(
+	      Route,
+	      { component: Projects },
+	      React.createElement(Route, { path: '/projects', component: AllProjects }),
+	      React.createElement(Route, { path: '/projects/:id', component: OneProject })
+	    )
+	  )
 	), document.getElementById('app'));
 
 /***/ }),
@@ -25303,7 +25313,8 @@
 	        'h1',
 	        null,
 	        'Hello there, this is Main'
-	      )
+	      ),
+	      this.props.children
 	    );
 	  }
 
@@ -25462,6 +25473,112 @@
 	    images: []
 	  }]
 	};
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var SplashPageNav = __webpack_require__(226);
+
+	var SplashPage = React.createClass({
+	  displayName: 'SplashPage',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h2',
+	        null,
+	        'This is the splash page'
+	      ),
+	      React.createElement(SplashPageNav, null)
+	    );
+	  }
+
+	});
+
+	module.exports = SplashPage;
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(159),
+	    Route = _require.Route,
+	    Router = _require.Router,
+	    IndexRoute = _require.IndexRoute,
+	    hashHistory = _require.hashHistory,
+	    Link = _require.Link;
+
+	var SplashPageNav = React.createClass({
+	  displayName: 'SplashPageNav',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'ul',
+	        null,
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/projects' },
+	            'Projects'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'https://instagram.com' },
+	            'Instagram'
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = SplashPageNav;
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Project = __webpack_require__(222);
+	var OneProject = __webpack_require__(223);
+	var AllProjects = __webpack_require__(221);
+	var projects = __webpack_require__(224);
+
+	var Projects = React.createClass({
+	  displayName: 'Projects',
+
+	  render: function render() {
+
+	    return React.createElement(
+	      'div',
+	      null,
+	      this.props.children
+	    );
+	  }
+	});
+
+	module.exports = Projects;
 
 /***/ })
 /******/ ]);
