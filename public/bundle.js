@@ -25563,6 +25563,8 @@
 	var Project = __webpack_require__(222);
 	var OneProject = __webpack_require__(223);
 	var AllProjects = __webpack_require__(221);
+	var ProjectsNav = __webpack_require__(228);
+	var ProjectsFooter = __webpack_require__(229);
 	var projects = __webpack_require__(224);
 
 	var Projects = React.createClass({
@@ -25573,12 +25575,108 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      this.props.children
+	      React.createElement(ProjectsNav, null),
+	      this.props.children,
+	      React.createElement(ProjectsFooter, null)
 	    );
 	  }
 	});
 
 	module.exports = Projects;
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(159),
+	    Route = _require.Route,
+	    Router = _require.Router,
+	    IndexRoute = _require.IndexRoute,
+	    hashHistory = _require.hashHistory,
+	    Link = _require.Link,
+	    browserHistory = _require.browserHistory;
+
+	var ProjectsNav = React.createClass({
+	  displayName: 'ProjectsNav',
+
+	  render: function render() {
+
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Projects Nav'
+	      ),
+	      React.createElement(
+	        'ul',
+	        null,
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/projects' },
+	            'Projects'
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = ProjectsNav;
+
+/***/ }),
+/* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(159),
+	    Route = _require.Route,
+	    Router = _require.Router,
+	    IndexRoute = _require.IndexRoute,
+	    hashHistory = _require.hashHistory,
+	    Link = _require.Link;
+
+	var ProjectsFooter = React.createClass({
+	  displayName: 'ProjectsFooter',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Projects Footer'
+	      ),
+	      React.createElement(
+	        'ul',
+	        null,
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'https://instagram.com' },
+	            'Instagram'
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = ProjectsFooter;
 
 /***/ })
 /******/ ]);
