@@ -25338,9 +25338,6 @@
 	var AllProjects = React.createClass({
 	  displayName: 'AllProjects',
 
-	  setTitle: function setTitle(title) {
-	    this.props.showTitle(title);
-	  },
 
 	  render: function render() {
 	    var _this = this;
@@ -25399,7 +25396,7 @@
 	      title,
 	      React.createElement(
 	        Link,
-	        { to: { pathname: '/projects/' + id }, onClick: this.handleClick },
+	        { to: { pathname: '/projects/' + id } },
 	        'TestLink'
 	      )
 	    );
@@ -25574,22 +25571,13 @@
 	var Projects = React.createClass({
 	  displayName: 'Projects',
 
-	  getInitialState: function getInitialState() {
-	    return {
-	      title: ''
-	    };
-	  },
-	  displayTitle: function displayTitle(title) {
-	    this.setState({
-	      title: title
-	    });
-	  },
+
 	  render: function render() {
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(ProjectsNav, { currentProject: this.state.title }),
-	      React.createElement(AllProjects, { showTitle: this.displayTitle }),
+	      React.createElement(ProjectsNav, null),
+	      this.props.children,
 	      React.createElement(ProjectsFooter, null)
 	    );
 	  }
@@ -25609,10 +25597,24 @@
 	    Link = _require.Link,
 	    IndexLink = _require.IndexLink;
 
+	var projects = __webpack_require__(224);
+
 	var ProjectsNav = React.createClass({
 	  displayName: 'ProjectsNav',
 
+
 	  render: function render() {
+
+	    var projectsArray = projects.default.projects;
+	    var renderProjectLinks = function renderProjectLinks() {
+	      return projectsArray.map(function (project) {
+	        return React.createElement(
+	          Link,
+	          { to: { pathname: '/projects/' + project.id }, activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	          project.title
+	        );
+	      });
+	    };
 
 	    return React.createElement(
 	      'div',
@@ -25623,32 +25625,16 @@
 	        'Projects Nav'
 	      ),
 	      React.createElement(
-	        'ul',
-	        null,
-	        React.createElement(
-	          'li',
-	          null,
-	          React.createElement(
-	            IndexLink,
-	            { to: '/' },
-	            'Julia Himmel'
-	          )
-	        ),
-	        React.createElement(
-	          'li',
-	          null,
-	          React.createElement(
-	            Link,
-	            { to: '/projects' },
-	            'Projects'
-	          )
-	        ),
-	        React.createElement(
-	          'li',
-	          null,
-	          this.props.currentProject
-	        )
-	      )
+	        IndexLink,
+	        { to: '/' },
+	        'Julia Himmel'
+	      ),
+	      React.createElement(
+	        Link,
+	        { to: '/projects' },
+	        'Projects'
+	      ),
+	      renderProjectLinks()
 	    );
 	  }
 	});

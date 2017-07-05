@@ -4,9 +4,6 @@ var OneProject = require('OneProject');
 var projects = require('app/data/projects.js');
 
 var AllProjects = React.createClass({
-  setTitle: function (title) {
-    this.props.showTitle(title);
-  },
 
   render: function () {
 

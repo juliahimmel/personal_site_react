@@ -11,7 +11,7 @@ var Project = React.createClass({
       <div>
         {id}
         {title}
-        <Link to={ {pathname: `/projects/${id}`}} onClick={this.handleClick} >TestLink</Link>
+        <Link to={ {pathname: `/projects/${id}`}}>TestLink</Link>
       </div>
     )
   }
