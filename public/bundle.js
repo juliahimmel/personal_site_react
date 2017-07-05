@@ -25338,7 +25338,12 @@
 	var AllProjects = React.createClass({
 	  displayName: 'AllProjects',
 
+	  setTitle: function setTitle(title) {
+	    this.props.showTitle(title);
+	  },
+
 	  render: function render() {
+	    var _this = this;
 
 	    var projectsArray = projects.default.projects;
 	    var renderProjects = function renderProjects() {
@@ -25346,7 +25351,7 @@
 	        return React.createElement(
 	          'div',
 	          null,
-	          React.createElement(Project, _extends({ key: project.id }, project))
+	          React.createElement(Project, _extends({ key: project.id }, project, { onTitleSet: _this.setTitle }))
 	        );
 	      });
 	    };
@@ -25379,6 +25384,9 @@
 	var Project = React.createClass({
 	  displayName: 'Project',
 
+	  handleClick: function handleClick() {
+	    this.props.onTitleSet(this.props.title);
+	  },
 	  render: function render() {
 	    var _props = this.props,
 	        id = _props.id,
@@ -25391,7 +25399,7 @@
 	      title,
 	      React.createElement(
 	        Link,
-	        { to: { pathname: '/projects/' + id } },
+	        { to: { pathname: '/projects/' + id }, onClick: this.handleClick },
 	        'TestLink'
 	      )
 	    );
@@ -25566,13 +25574,22 @@
 	var Projects = React.createClass({
 	  displayName: 'Projects',
 
+	  getInitialState: function getInitialState() {
+	    return {
+	      title: ''
+	    };
+	  },
+	  displayTitle: function displayTitle(title) {
+	    this.setState({
+	      title: title
+	    });
+	  },
 	  render: function render() {
-
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(ProjectsNav, null),
-	      this.props.children,
+	      React.createElement(ProjectsNav, { currentProject: this.state.title }),
+	      React.createElement(AllProjects, { showTitle: this.displayTitle }),
 	      React.createElement(ProjectsFooter, null)
 	    );
 	  }
@@ -25625,6 +25642,11 @@
 	            { to: '/projects' },
 	            'Projects'
 	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          this.props.currentProject
 	        )
 	      )
 	    );

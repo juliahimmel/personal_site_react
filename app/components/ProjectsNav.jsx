@@ -10,6 +10,7 @@ var ProjectsNav = React.createClass({
         <ul>
           <li><IndexLink to='/'>Julia Himmel</IndexLink></li>
           <li><Link to='/projects'>Projects</Link></li>
+          <li>{this.props.currentProject}</li>
         </ul>
       </div>
     )

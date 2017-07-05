@@ -13,6 +13,6 @@ var SplashPageNav = React.createClass({
       </div>
     )
   }
-})
+});
 
 module.exports = SplashPageNav;
