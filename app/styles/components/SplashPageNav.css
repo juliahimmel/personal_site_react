@@ -1,0 +1,25 @@
+.splash-page-nav ul {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.667em;
+  list-style-type: none;
+  text-align: center;
+}
+
+.splash-page-nav li {
+  display: inline;
+  margin-right: 2.5em;
+}
+
+.splash-page-nav li:last-of-type {
+  margin-right: 0;
+}
+
+.splash-page-nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+.splash-page-nav li a:hover {
+  background-color: rgb(255, 255, 0);
+}

@@ -118,7 +118,9 @@
 
 	exports = module.exports = __webpack_require__(3)();
 	// imports
-	exports.i(__webpack_require__(4), "");
+	exports.i(__webpack_require__(235), "");
+	exports.i(__webpack_require__(236), "");
+	exports.i(__webpack_require__(237), "");
 
 	// module
 	exports.push([module.id, "\n", ""]);
@@ -183,20 +185,7 @@
 
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "* {\n  font-family: sans-serif;\n}\n", ""]);
-
-	// exports
-
-
-/***/ }),
+/* 4 */,
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25680,11 +25669,6 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        'h1',
-	        null,
-	        'Hello there, this is Main'
-	      ),
 	      this.props.children
 	    );
 	  }
@@ -25708,11 +25692,20 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'splash-page' },
 	      React.createElement(
-	        'h2',
-	        null,
-	        'This is the splash page'
+	        'div',
+	        { className: 'splash-text-wrapper' },
+	        React.createElement(
+	          'h1',
+	          null,
+	          'Julia Himmel'
+	        ),
+	        React.createElement(
+	          'p',
+	          { className: 'intro-text' },
+	          'Designer and developer pairing a strong typographic sensibility and deep understanding of brand and identity systems with a steadfast commitment to user-centered design. Experienced in all aspects of the digital production/software development cycle.'
+	        )
 	      ),
 	      React.createElement(SplashPageNav, null)
 	    );
@@ -25739,7 +25732,7 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'splash-page-nav' },
 	      React.createElement(
 	        'ul',
 	        null,
@@ -26058,6 +26051,48 @@
 	});
 
 	module.exports = ProjectsFooter;
+
+/***/ }),
+/* 235 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body {\n  font-size: 112.5%;\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".splash-page {\n\n}\n\n.splash-page h1 {\n  font-family: 'Merriweather', serif;\n  font-weight: 400;\n  font-size: 2em;\n  text-align: center;\n}\n\n.intro-text {\n  font-family: 'Merriweather', serif;\n  font-weight: 300;\n  font-size: 1.167em;\n  text-align: center;\n}\n\n@media (min-width: 768px) {\n  .splash-text-wrapper {\n    max-width: 45%;\n    margin: 0 auto;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".splash-page-nav ul {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 400;\n  font-size: 0.667em;\n  list-style-type: none;\n  text-align: center;\n}\n\n.splash-page-nav li {\n  display: inline;\n  margin-right: 2.5em;\n}\n\n.splash-page-nav li:last-of-type {\n  margin-right: 0;\n}\n\n.splash-page-nav li a {\n  text-decoration: none;\n  color: black;\n}\n\n.splash-page-nav li a:hover {\n  background-color: rgb(255, 255, 0);\n}\n", ""]);
+
+	// exports
+
 
 /***/ })
 /******/ ]);
