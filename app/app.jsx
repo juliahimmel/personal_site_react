@@ -6,6 +6,7 @@ var SplashPage = require('SplashPage');
 var Projects = require('Projects');
 var AllProjects = require('AllProjects');
 var OneProject = require('OneProject');
+import Styles from 'app/styles/app.css';
 
 ReactDOM.render(
   <Router history={hashHistory}>
