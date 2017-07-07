@@ -1,5 +1,5 @@
 var React = require('react');
-var {Route, Router, IndexRoute, hashHistory, Link} = require('react-router');
+var {Link} = require('react-router');
 
 var Project = React.createClass({
   handleClick: function () {

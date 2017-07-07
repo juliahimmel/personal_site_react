@@ -65,7 +65,7 @@
 
 	ReactDOM.render(React.createElement(
 	  Router,
-	  { history: browserHistory },
+	  { history: hashHistory },
 	  React.createElement(
 	    Route,
 	    { path: '/', component: Main },
@@ -25372,10 +25372,6 @@
 	var React = __webpack_require__(1);
 
 	var _require = __webpack_require__(159),
-	    Route = _require.Route,
-	    Router = _require.Router,
-	    IndexRoute = _require.IndexRoute,
-	    hashHistory = _require.hashHistory,
 	    Link = _require.Link;
 
 	var Project = React.createClass({
@@ -25650,10 +25646,6 @@
 	var React = __webpack_require__(1);
 
 	var _require = __webpack_require__(159),
-	    Route = _require.Route,
-	    Router = _require.Router,
-	    IndexRoute = _require.IndexRoute,
-	    hashHistory = _require.hashHistory,
 	    Link = _require.Link;
 
 	var ProjectsFooter = React.createClass({
@@ -25671,6 +25663,15 @@
 	      React.createElement(
 	        'ul',
 	        null,
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/projects' },
+	            'Projects'
+	          )
+	        ),
 	        React.createElement(
 	          'li',
 	          null,

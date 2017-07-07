@@ -1,5 +1,5 @@
 var React = require('react');
-var {Route, Router, IndexRoute, hashHistory, Link} = require('react-router');
+var {Link} = require('react-router');
 
 var ProjectsFooter = React.createClass({
   render: function () {
@@ -7,6 +7,7 @@ var ProjectsFooter = React.createClass({
       <div>
         <h2>Projects Footer</h2>
         <ul>
+          <li><Link to='/projects'>Projects</Link></li>
           <li><a href='https://instagram.com'>Instagram</a></li>
         </ul>
       </div>

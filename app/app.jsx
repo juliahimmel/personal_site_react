@@ -8,7 +8,7 @@ var AllProjects = require('AllProjects');
 var OneProject = require('OneProject');
 
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={SplashPage}/>
       <Route component={Projects}>
