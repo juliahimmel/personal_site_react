@@ -8,9 +8,9 @@ var ProjectsNav = React.createClass({
 
     var projectsArray = projects.default.projects;
     var renderProjectLinks = function () {
-      return projectsArray.map((project) => {
+      return projectsArray.map((project, i) => {
         return (
-          <li><Link className="one-project-link" to={ {pathname: `/projects/${project.id}`}} activeClassName="active" >{project.title}</Link></li>
+          <li key={i}><Link className="one-project-link" to={ {pathname: `/projects/${project.id}`}} activeClassName="active" >{project.title}</Link></li>
         )
       })
     };

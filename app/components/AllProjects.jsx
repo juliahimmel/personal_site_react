@@ -11,15 +11,13 @@ var AllProjects = React.createClass({
     var renderProjects = () => {
       return projectsArray.map((project) => {
         return (
-          <div>
             <Project key={project.id} {...project} onTitleSet={this.setTitle}/>
-          </div>
         )
       })
     };
 
     return (
-      <div>
+      <div className="all-projects">
         {renderProjects()}
       </div>
     )

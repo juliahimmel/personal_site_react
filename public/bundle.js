@@ -123,6 +123,7 @@
 	exports.i(__webpack_require__(237), "");
 	exports.i(__webpack_require__(238), "");
 	exports.i(__webpack_require__(239), "");
+	exports.i(__webpack_require__(240), "");
 
 	// module
 	exports.push([module.id, "\n", ""]);
@@ -25837,17 +25838,46 @@
 	  render: function render() {
 	    var _props = this.props,
 	        id = _props.id,
-	        title = _props.title;
+	        tags = _props.tags,
+	        title = _props.title,
+	        subtitle = _props.subtitle,
+	        shortDescription = _props.shortDescription,
+	        images = _props.images;
+
+
+	    var renderTags = function renderTags() {
+	      return tags.map(function (tag, i) {
+	        return React.createElement(
+	          'p',
+	          { key: i, className: 'tag' },
+	          tag
+	        );
+	      });
+	    };
 
 	    return React.createElement(
 	      'div',
-	      null,
-	      id,
-	      title,
+	      { className: 'project-small' },
+	      React.createElement(Link, { style: { background: 'url("' + images[0] + '") no-repeat center' }, className: 'image-link', to: { pathname: '/projects/' + id } }),
 	      React.createElement(
-	        Link,
-	        { to: { pathname: '/projects/' + id } },
-	        'TestLink'
+	        'div',
+	        { className: 'tags' },
+	        renderTags()
+	      ),
+	      React.createElement(
+	        'h4',
+	        { className: 'title' },
+	        title
+	      ),
+	      React.createElement(
+	        'h5',
+	        { className: 'subtitle' },
+	        subtitle
+	      ),
+	      React.createElement(
+	        'p',
+	        { className: 'short-description' },
+	        shortDescription
 	      )
 	    );
 	  }
@@ -25914,18 +25944,20 @@
 	exports.default = {
 	  projects: [{
 	    id: 0,
+	    tags: ['code', 'design'],
 	    title: 'Tattle App',
 	    subtitle: 'Some subtitle',
 	    shortDescription: 'A Short Description',
 	    longDescription: 'A Long Description',
-	    images: []
+	    images: ["https://fthmb.tqn.com/INZEtkWYEpsZaksoewT_mA4DREo=/960x0/filters:no_upscale()/about/Two-kittens-GettyImages-559292093-58822e4f3df78c2ccd8b318c.jpg"]
 	  }, {
 	    id: 1,
+	    tags: ['code', 'design'],
 	    title: 'Second Project',
 	    subtitle: 'Some subtitle two',
 	    shortDescription: 'A Short Description two',
 	    longDescription: 'A Long Description two',
-	    images: []
+	    images: ["https://fthmb.tqn.com/INZEtkWYEpsZaksoewT_mA4DREo=/960x0/filters:no_upscale()/about/Two-kittens-GettyImages-559292093-58822e4f3df78c2ccd8b318c.jpg"]
 	  }]
 	};
 
@@ -25952,17 +25984,13 @@
 	    var projectsArray = projects.default.projects;
 	    var renderProjects = function renderProjects() {
 	      return projectsArray.map(function (project) {
-	        return React.createElement(
-	          'div',
-	          null,
-	          React.createElement(Project, _extends({ key: project.id }, project, { onTitleSet: _this.setTitle }))
-	        );
+	        return React.createElement(Project, _extends({ key: project.id }, project, { onTitleSet: _this.setTitle }));
 	      });
 	    };
 
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'all-projects' },
 	      renderProjects()
 	    );
 	  }
@@ -25992,10 +26020,10 @@
 
 	    var projectsArray = projects.default.projects;
 	    var renderProjectLinks = function renderProjectLinks() {
-	      return projectsArray.map(function (project) {
+	      return projectsArray.map(function (project, i) {
 	        return React.createElement(
 	          'li',
-	          null,
+	          { key: i },
 	          React.createElement(
 	            Link,
 	            { className: 'one-project-link', to: { pathname: '/projects/' + project.id }, activeClassName: 'active' },
@@ -26093,7 +26121,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  font-size: 112.5%;\n}\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  font-size: 112.5%;\n}\n\n@media (min-width: 768px) {\n  body {\n    padding-left: 50px;\n    padding-right: 50px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -26149,7 +26177,21 @@
 
 
 	// module
-	exports.push([module.id, "\n", ""]);
+	exports.push([module.id, ".all-projects {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  margin-left: -6px;\n  margin-right: -6px;\n  min-height: 200px;\n  padding-top: 3.28em;\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".project-small {\n  display: inline-block;\n  /*flex-basis: 30%;*/\n  width: calc(33.3333% - 15px);\n  padding-left: 6px;\n  padding-right: 6px;\n}\n\n.project-small .title,\n.project-small .subtitle,\n.project-small .short-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 3px;\n}\n\n.project-small .title {\n  font-weight: 900;\n}\n\n.project-small .subtitle,\n.project-small .short-description {\n  font-weight: 400;\n}\n\n.project-small .short-description {\n  font-style: italic;\n}\n\n.project-small a {\n  display: block;\n  width: 100%;\n  height: 50%;\n}\n\n.tag {\n  display: inline-block;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  font-size: 0.33em;\n  padding: 0.33em;\n  background-color: rgb(255,0,255);\n  color: white;\n  margin-right: 0.66em;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-top: 6px;\n}\n", ""]);
 
 	// exports
 

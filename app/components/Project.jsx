@@ -6,12 +6,25 @@ var Project = React.createClass({
     this.props.onTitleSet(this.props.title);
   },
   render: function () {
-    var {id, title} = this.props;
+    var {id, tags, title, subtitle, shortDescription, images} = this.props;
+
+    var renderTags = () => {
+      return tags.map((tag, i) => {
+        return (
+          <p key={i} className="tag">{tag}</p>
+        )
+      })
+    };
+
     return (
-      <div>
-        {id}
-        {title}
-        <Link to={ {pathname: `/projects/${id}`}}>TestLink</Link>
+      <div className="project-small">
+        <Link style={{background: 'url("' + images[0] + '") no-repeat center'}} className="image-link" to={ {pathname: `/projects/${id}`}}/>
+        <div className="tags">
+          {renderTags()}
+        </div>
+        <h4 className="title">{title}</h4>
+        <h5 className="subtitle">{subtitle}</h5>
+        <p className="short-description">{shortDescription}</p>
       </div>
     )
   }
