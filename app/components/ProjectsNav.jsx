@@ -10,18 +10,17 @@ var ProjectsNav = React.createClass({
     var renderProjectLinks = function () {
       return projectsArray.map((project) => {
         return (
-          <Link to={ {pathname: `/projects/${project.id}`}} activeClassName="active" activeStyle={{fontWeight: 'bold'}}>{project.title}</Link>
+          <li><Link className="one-project-link" to={ {pathname: `/projects/${project.id}`}} activeClassName="active" >{project.title}</Link></li>
         )
       })
     };
 
     return (
-      <div>
-        <h2>Projects Nav</h2>
-        <IndexLink to='/'>Julia Himmel</IndexLink>
-        <Link to='/projects'>Projects</Link>
+      <ul className="projects-nav">
+        <li><IndexLink className="index-link" to='/'>Julia Himmel</IndexLink></li>
+        <li><Link className="projects-link" to='/projects'>Projects</Link></li>
         {renderProjectLinks()}
-      </div>
+      </ul>
     )
   }
 });

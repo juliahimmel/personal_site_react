@@ -121,6 +121,8 @@
 	exports.i(__webpack_require__(235), "");
 	exports.i(__webpack_require__(236), "");
 	exports.i(__webpack_require__(237), "");
+	exports.i(__webpack_require__(238), "");
+	exports.i(__webpack_require__(239), "");
 
 	// module
 	exports.push([module.id, "\n", ""]);
@@ -25740,9 +25742,9 @@
 	          'li',
 	          null,
 	          React.createElement(
-	            Link,
-	            { to: '/projects' },
-	            'Projects'
+	            'a',
+	            { href: 'https://instagram.com' },
+	            'LinkedIn'
 	          )
 	        ),
 	        React.createElement(
@@ -25752,6 +25754,29 @@
 	            'a',
 	            { href: 'https://instagram.com' },
 	            'Instagram'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'https://instagram.com' },
+	            'Download Resume'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/projects' },
+	            'Projects',
+	            React.createElement(
+	              'span',
+	              { className: 'zapf_arrow' },
+	              ' \u2192'
+	            )
 	          )
 	        )
 	      )
@@ -25969,30 +25994,37 @@
 	    var renderProjectLinks = function renderProjectLinks() {
 	      return projectsArray.map(function (project) {
 	        return React.createElement(
-	          Link,
-	          { to: { pathname: '/projects/' + project.id }, activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	          project.title
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { className: 'one-project-link', to: { pathname: '/projects/' + project.id }, activeClassName: 'active' },
+	            project.title
+	          )
 	        );
 	      });
 	    };
 
 	    return React.createElement(
-	      'div',
-	      null,
+	      'ul',
+	      { className: 'projects-nav' },
 	      React.createElement(
-	        'h2',
+	        'li',
 	        null,
-	        'Projects Nav'
+	        React.createElement(
+	          IndexLink,
+	          { className: 'index-link', to: '/' },
+	          'Julia Himmel'
+	        )
 	      ),
 	      React.createElement(
-	        IndexLink,
-	        { to: '/' },
-	        'Julia Himmel'
-	      ),
-	      React.createElement(
-	        Link,
-	        { to: '/projects' },
-	        'Projects'
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { className: 'projects-link', to: '/projects' },
+	          'Projects'
+	        )
 	      ),
 	      renderProjectLinks()
 	    );
@@ -26075,7 +26107,7 @@
 
 
 	// module
-	exports.push([module.id, ".splash-page {\n\n}\n\n.splash-page h1 {\n  font-family: 'Merriweather', serif;\n  font-weight: 400;\n  font-size: 2em;\n  text-align: center;\n}\n\n.intro-text {\n  font-family: 'Merriweather', serif;\n  font-weight: 300;\n  font-size: 1.167em;\n  text-align: center;\n}\n\n@media (min-width: 768px) {\n  .splash-text-wrapper {\n    max-width: 45%;\n    margin: 0 auto;\n  }\n}\n", ""]);
+	exports.push([module.id, ".splash-page {\n  padding-top: 4em;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.splash-page h1 {\n  font-family: 'Merriweather', serif;\n  font-weight: 400;\n  font-size: 2em;\n  text-align: center;\n  margin-bottom: 1.1em;\n}\n\n.splash-page h1::after {\n  content: \"\";\n  display: block;\n  margin: 0 auto;\n  margin-top: 1em;\n  top: 0;\n  left: 0;\n  height: 1px;\n  width: 0.7em;\n  border-bottom: 9px solid rgb(255,0,255);\n}\n\n\n.intro-text {\n  font-family: 'Merriweather', serif;\n  font-weight: 300;\n  font-size: 1.167em;\n  text-align: center;\n}\n\n@media (min-width: 768px) {\n  .splash-text-wrapper {\n    max-width: 45%;\n    margin: 0 auto;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -26089,7 +26121,35 @@
 
 
 	// module
-	exports.push([module.id, ".splash-page-nav ul {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 400;\n  font-size: 0.667em;\n  list-style-type: none;\n  text-align: center;\n}\n\n.splash-page-nav li {\n  display: inline;\n  margin-right: 2.5em;\n}\n\n.splash-page-nav li:last-of-type {\n  margin-right: 0;\n}\n\n.splash-page-nav li a {\n  text-decoration: none;\n  color: black;\n}\n\n.splash-page-nav li a:hover {\n  background-color: rgb(255, 255, 0);\n}\n", ""]);
+	exports.push([module.id, ".splash-page-nav ul {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 400;\n  font-size: 0.667em;\n  list-style-type: none;\n  text-align: center;\n  margin-top: 4em;\n}\n\n.splash-page-nav li {\n  display: inline;\n  margin-right: 2.44em;\n}\n\n.splash-page-nav li:last-of-type {\n  margin-right: 0;\n}\n\n.splash-page-nav li a {\n  text-decoration: none;\n  color: black;\n}\n\n.zapf_arrow {\n  font-family: 'ZapfDingbatsStd', sans-serif;\n}\n\n\n.splash-page-nav li a:hover {\n  background-color: rgb(255, 255, 0);\n  /*padding: 5px;*/\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "ul.projects-nav {\n  list-style-type: none;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  -webkit-padding-start: 0px;\n}\n\nul.projects-nav li {\n  display: inline-block;\n  /*margin-right: 2.44em;*/\n  /*margin-right: 44px;*/\n}\n\n.projects-nav a {\n  display: none;\n  text-decoration: none;\n  color: black;\n}\n\n.projects-nav a:hover,\n.projects-nav a:visited {\n  color: black;\n}\n\n.projects-nav a.active,\n.projects-nav a.index-link,\n.projects-nav a.projects-link {\n  display: inline-block;\n}\n\n.projects-nav a.projects-link,\nul.projects-nav a.active {\n  padding-left: 14px;\n  padding-right: 14px;\n  padding-top: 0.5em;\n  padding-bottom: 0.5em;\n  border-left: 1px solid black;\n}\n\n.projects-nav a.projects-link,\n.projects-nav a.one-project-link {\n  font-family: 'Merriweather', serif;\n  font-weight: 300;\n  font-size: 1.17em;\n}\n\n.projects-nav a.one-project-link {\n  font-style: italic;\n}\n\n.projects-nav a.index-link {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  padding-right: 14px;\n  font-size: 0.89em;\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n", ""]);
 
 	// exports
 

@@ -1,0 +1,58 @@
+ul.projects-nav {
+  list-style-type: none;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-padding-start: 0px;
+}
+
+ul.projects-nav li {
+  display: inline-block;
+  /*margin-right: 2.44em;*/
+  /*margin-right: 44px;*/
+}
+
+.projects-nav a {
+  display: none;
+  text-decoration: none;
+  color: black;
+}
+
+.projects-nav a:hover,
+.projects-nav a:visited {
+  color: black;
+}
+
+.projects-nav a.active,
+.projects-nav a.index-link,
+.projects-nav a.projects-link {
+  display: inline-block;
+}
+
+.projects-nav a.projects-link,
+ul.projects-nav a.active {
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-left: 1px solid black;
+}
+
+.projects-nav a.projects-link,
+.projects-nav a.one-project-link {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1.17em;
+}
+
+.projects-nav a.one-project-link {
+  font-style: italic;
+}
+
+.projects-nav a.index-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  padding-right: 14px;
+  font-size: 0.89em;
+}

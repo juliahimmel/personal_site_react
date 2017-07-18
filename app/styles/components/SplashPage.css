@@ -1,5 +1,7 @@
 .splash-page {
-
+  padding-top: 4em;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .splash-page h1 {
@@ -7,7 +9,21 @@
   font-weight: 400;
   font-size: 2em;
   text-align: center;
+  margin-bottom: 1.1em;
 }
+
+.splash-page h1::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 0.7em;
+  border-bottom: 9px solid rgb(255,0,255);
+}
+
 
 .intro-text {
   font-family: 'Merriweather', serif;
