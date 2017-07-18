@@ -124,6 +124,8 @@
 	exports.i(__webpack_require__(238), "");
 	exports.i(__webpack_require__(239), "");
 	exports.i(__webpack_require__(240), "");
+	exports.i(__webpack_require__(241), "");
+	exports.i(__webpack_require__(242), "");
 
 	// module
 	exports.push([module.id, "\n", ""]);
@@ -25808,7 +25810,7 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'projects-container' },
 	      React.createElement(ProjectsNav, null),
 	      this.props.children,
 	      React.createElement(ProjectsFooter, null)
@@ -26078,7 +26080,7 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'projects-footer' },
 	      React.createElement(
 	        'h2',
 	        null,
@@ -26177,7 +26179,7 @@
 
 
 	// module
-	exports.push([module.id, ".all-projects {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  margin-left: -6px;\n  margin-right: -6px;\n  min-height: 200px;\n  padding-top: 3.28em;\n}\n", ""]);
+	exports.push([module.id, ".all-projects {\n  display: flex;\n  flex: 1;\n  flex-direction: row;\n  flex-wrap: wrap;\n  margin-left: -6px;\n  margin-right: -6px;\n  min-height: 200px;\n  padding-top: 3.28em;\n}\n", ""]);
 
 	// exports
 
@@ -26191,7 +26193,35 @@
 
 
 	// module
-	exports.push([module.id, ".project-small {\n  display: inline-block;\n  /*flex-basis: 30%;*/\n  width: calc(33.3333% - 15px);\n  padding-left: 6px;\n  padding-right: 6px;\n}\n\n.project-small .title,\n.project-small .subtitle,\n.project-small .short-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 3px;\n}\n\n.project-small .title {\n  font-weight: 900;\n}\n\n.project-small .subtitle,\n.project-small .short-description {\n  font-weight: 400;\n}\n\n.project-small .short-description {\n  font-style: italic;\n}\n\n.project-small a {\n  display: block;\n  width: 100%;\n  height: 50%;\n}\n\n.tag {\n  display: inline-block;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  font-size: 0.33em;\n  padding: 0.33em;\n  background-color: rgb(255,0,255);\n  color: white;\n  margin-right: 0.66em;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-top: 6px;\n}\n", ""]);
+	exports.push([module.id, ".project-small {\n  display: inline-block;\n  /*flex-basis: 30%;*/\n  width: calc(33.3333% - 15px);\n  /*max-height: 250px;*/\n  padding-left: 6px;\n  padding-right: 6px;\n}\n\n.project-small .title,\n.project-small .subtitle,\n.project-small .short-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 3px;\n}\n\n.project-small .title {\n  font-weight: 900;\n}\n\n.project-small .subtitle,\n.project-small .short-description {\n  font-weight: 400;\n}\n\n.project-small .short-description {\n  font-style: italic;\n}\n\n.project-small a {\n  display: block;\n  width: 100%;\n  height: 50%;\n  max-height: 100px;\n}\n\n.tag {\n  display: inline-block;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  font-size: 0.33em;\n  padding: 0.33em;\n  background-color: rgb(255,0,255);\n  color: white;\n  margin-right: 0.66em;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-top: 9px;\n  margin-bottom: 6px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".projects-container {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 242 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".projects-footer {\n  /*align-self: flex-end;*/\n}\n", ""]);
 
 	// exports
 

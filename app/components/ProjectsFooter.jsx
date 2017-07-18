@@ -4,7 +4,7 @@ var {Link} = require('react-router');
 var ProjectsFooter = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="projects-footer">
         <h2>Projects Footer</h2>
         <ul>
           <li><Link to='/projects'>Projects</Link></li>

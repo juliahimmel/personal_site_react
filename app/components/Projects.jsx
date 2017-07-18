@@ -10,7 +10,7 @@ var Projects = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="projects-container">
         <ProjectsNav/>
         {/* <AllProjects /> */}
         {this.props.children}
