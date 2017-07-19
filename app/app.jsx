@@ -6,6 +6,8 @@ var SplashPage = require('SplashPage');
 var Projects = require('Projects');
 var AllProjects = require('AllProjects');
 var OneProject = require('OneProject');
+var Tags = require('Tags');
+var Gallery = require('Gallery');
 import Styles from 'app/styles/app.css';
 
 ReactDOM.render(

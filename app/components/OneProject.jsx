@@ -1,16 +1,18 @@
 var React = require('react');
+var Tags = require('Tags');
+var Gallery = require('Gallery');
 var projects = require('app/data/projects.js');
 
 const OneProject = (props) => {
   var projectId = parseInt(props.params.id);
-  var {id, title} = projects.default.projects[projectId];
+  var {id, tags, title, subtitle, shortDescription, longDescription, images} = projects.default.projects[projectId];
   return (
-    <div>
-      <h1>Hello</h1>
-      <h3>props: {JSON.stringify(props)}</h3>
-      <h3>ID: {JSON.stringify(props.params.id)}</h3>
-      <h4>{title}</h4>
-      {/* <h3>ID: {projects.default.projects[]}</h3> */}
+    <div className="one-project">
+      <Tags tags={tags}/>
+      <h2 className="title">{title}</h2>
+      <h3 className="subtitle">{subtitle}</h3>
+      <h4 className="long-description">{longDescription}</h4>
+      <Gallery images={images}/>
     </div>
   )
 }

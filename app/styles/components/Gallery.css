@@ -1,0 +1,19 @@
+ul.gallery-images {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.gallery-images li {
+  display: inline;
+  margin-right: 12px;
+}
+
+img.gallery-image {
+  height: 450px;
+  align: top;
+}
