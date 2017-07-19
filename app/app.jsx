@@ -8,6 +8,8 @@ var AllProjects = require('AllProjects');
 var OneProject = require('OneProject');
 var Tags = require('Tags');
 var Gallery = require('Gallery');
+var RightArrow = require('RightArrow');
+var LeftArrow = require('LeftArrow');
 import Styles from 'app/styles/app.css';
 
 ReactDOM.render(

@@ -17,3 +17,44 @@ img.gallery-image {
   height: 450px;
   align: top;
 }
+
+.arrows {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  right: 0px;
+}
+
+.right-arrow, .left-arrow {
+  display: block;
+  width: 17px;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.left-arrow {
+  margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+  #gallery li {
+    text-align: center;
+    display: block;
+    padding: 0;
+  }
+
+  .images {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .arrows {
+    display: none;
+  }
+}

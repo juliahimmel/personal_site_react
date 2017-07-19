@@ -1,4 +1,6 @@
 var React = require('react');
+var RightArrow = require('RightArrow');
+var LeftArrow = require('LeftArrow');
 
 var Gallery = React.createClass({
   render: function () {
@@ -16,9 +18,15 @@ var Gallery = React.createClass({
     };
 
     return (
-      <ul className="gallery-images">
-        {renderImages()}
-      </ul>
+      <div className="gallery-container">
+        <ul className="gallery-images" id="gallery">
+          {renderImages()}
+        </ul>
+        <div className="arrows">
+          <RightArrow onClick={this.props.onClick}/>
+          <LeftArrow onClick={this.props.onClick}/>
+        </div>
+      </div>
     )
 
   }

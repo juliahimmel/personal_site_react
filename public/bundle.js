@@ -70,6 +70,8 @@
 	var OneProject = __webpack_require__(239);
 	var Tags = __webpack_require__(238);
 	var Gallery = __webpack_require__(244);
+	var RightArrow = __webpack_require__(246);
+	var LeftArrow = __webpack_require__(247);
 
 
 	ReactDOM.render(React.createElement(
@@ -26051,39 +26053,91 @@
 	var Gallery = __webpack_require__(244);
 	var projects = __webpack_require__(240);
 
-	var OneProject = function OneProject(props) {
-	  var projectId = parseInt(props.params.id);
-	  var _projects$default$pro = projects.default.projects[projectId],
-	      id = _projects$default$pro.id,
-	      tags = _projects$default$pro.tags,
-	      title = _projects$default$pro.title,
-	      subtitle = _projects$default$pro.subtitle,
-	      shortDescription = _projects$default$pro.shortDescription,
-	      longDescription = _projects$default$pro.longDescription,
-	      images = _projects$default$pro.images;
+	var OneProject = React.createClass({
+	  displayName: 'OneProject',
 
-	  return React.createElement(
-	    'div',
-	    { className: 'one-project' },
-	    React.createElement(Tags, { tags: tags }),
-	    React.createElement(
-	      'h2',
-	      { className: 'title' },
-	      title
-	    ),
-	    React.createElement(
-	      'h3',
-	      { className: 'subtitle' },
-	      subtitle
-	    ),
-	    React.createElement(
-	      'h4',
-	      { className: 'long-description' },
-	      longDescription
-	    ),
-	    React.createElement(Gallery, { images: images })
-	  );
-	};
+	  handleClick: function handleClick(direction) {
+	    var galleryDiv = document.getElementById('gallery');
+	    var scrollAmount = 0;
+	    var slideTimer = setInterval(function () {
+	      if (direction === 'right') {
+	        galleryDiv.scrollLeft += 10;
+	      } else {
+	        galleryDiv.scrollLeft -= 10;
+	      };
+	      scrollAmount += 10;
+	      if (scrollAmount >= 100) {
+	        window.clearInterval(slideTimer);
+	      }
+	    }, 15);
+	  },
+	  render: function render() {
+	    var projectId = parseInt(this.props.params.id);
+	    var _projects$default$pro = projects.default.projects[projectId],
+	        id = _projects$default$pro.id,
+	        tags = _projects$default$pro.tags,
+	        title = _projects$default$pro.title,
+	        subtitle = _projects$default$pro.subtitle,
+	        shortDescription = _projects$default$pro.shortDescription,
+	        longDescription = _projects$default$pro.longDescription,
+	        images = _projects$default$pro.images;
+
+
+	    return React.createElement(
+	      'div',
+	      { className: 'one-project' },
+	      React.createElement(Tags, { tags: tags }),
+	      React.createElement(
+	        'h2',
+	        { className: 'title' },
+	        title
+	      ),
+	      React.createElement(
+	        'h3',
+	        { className: 'subtitle' },
+	        subtitle
+	      ),
+	      React.createElement(
+	        'h4',
+	        { className: 'long-description' },
+	        longDescription
+	      ),
+	      React.createElement(Gallery, { images: images, onClick: this.handleClick })
+	    );
+	  }
+	});
+
+	// (props) => {
+	//   var projectId = parseInt(props.params.id);
+	//   var {id, tags, title, subtitle, shortDescription, longDescription, images} = projects.default.projects[projectId];
+	//
+	//   var handleClick = (direction) => {
+	//     let galleryDiv = document.getElementById('gallery');
+	//     var scrollAmount = 0;
+	//     var slideTimer = setInterval(function(){
+	//       if (direction === 'right') {
+	//         galleryDiv.scrollLeft += 10;
+	//       }
+	//       else {
+	//         galleryDiv.scrollLeft -= 10;
+	//       };
+	//       scrollAmount += 10;
+	//       if(scrollAmount >= 100){
+	//           window.clearInterval(slideTimer);
+	//       }
+	//     },15);
+	//   };
+	//
+	//   return (
+	//     <div className="one-project">
+	//       <Tags tags={tags}/>
+	//       <h2 className="title">{title}</h2>
+	//       <h3 className="subtitle">{subtitle}</h3>
+	//       <h4 className="long-description">{longDescription}</h4>
+	//       <Gallery images={images} onClick={this.handleClick}/>
+	//     </div>
+	//   )
+	// }
 
 	module.exports = OneProject;
 
@@ -26286,12 +26340,14 @@
 /* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var React = __webpack_require__(14);
+	var RightArrow = __webpack_require__(246);
+	var LeftArrow = __webpack_require__(247);
 
 	var Gallery = React.createClass({
-	  displayName: "Gallery",
+	  displayName: 'Gallery',
 
 	  render: function render() {
 	    var _this = this;
@@ -26301,17 +26357,27 @@
 
 	      return images.map(function (imageLink, i) {
 	        return React.createElement(
-	          "li",
+	          'li',
 	          { key: i },
-	          React.createElement("img", { src: imageLink, className: "gallery-image" })
+	          React.createElement('img', { src: imageLink, className: 'gallery-image' })
 	        );
 	      });
 	    };
 
 	    return React.createElement(
-	      "ul",
-	      { className: "gallery-images" },
-	      renderImages()
+	      'div',
+	      { className: 'gallery-container' },
+	      React.createElement(
+	        'ul',
+	        { className: 'gallery-images', id: 'gallery' },
+	        renderImages()
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'arrows' },
+	        React.createElement(RightArrow, { onClick: this.props.onClick }),
+	        React.createElement(LeftArrow, { onClick: this.props.onClick })
+	      )
 	    );
 	  }
 	});
@@ -26327,10 +26393,58 @@
 
 
 	// module
-	exports.push([module.id, "ul.gallery-images {\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  overflow-x: scroll;\n  overflow-y: hidden;\n  width: 100%;\n  margin-top: 18px;\n}\n\n.gallery-images li {\n  display: inline;\n  margin-right: 12px;\n}\n\nimg.gallery-image {\n  height: 450px;\n  align: top;\n}\n", ""]);
+	exports.push([module.id, "ul.gallery-images {\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  overflow-x: scroll;\n  overflow-y: hidden;\n  width: 100%;\n  margin-top: 18px;\n}\n\n.gallery-images li {\n  display: inline;\n  margin-right: 12px;\n}\n\nimg.gallery-image {\n  height: 450px;\n  align: top;\n}\n\n.arrows {\n  margin: 0;\n  padding: 0;\n  position: absolute;\n  top: 45%;\n  right: 0px;\n}\n\n.right-arrow, .left-arrow {\n  display: block;\n  width: 17px;\n  padding: 0;\n  text-align: center;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.3em;\n  cursor: pointer;\n  background-color: #fff;\n  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);\n}\n\n.left-arrow {\n  margin-top: 10px;\n}\n\n@media (max-width: 650px) {\n  #gallery li {\n    text-align: center;\n    display: block;\n    padding: 0;\n  }\n\n  .images {\n    width: 100%;\n    margin: 20px 0;\n  }\n\n  .arrows {\n    display: none;\n  }\n}\n", ""]);
 
 	// exports
 
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(14);
+
+	var RightArrow = function RightArrow(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'a',
+	      { className: 'right-arrow', onClick: function onClick() {
+	          props.onClick('right');
+	        } },
+	      '\u203A'
+	    )
+	  );
+	};
+
+	module.exports = RightArrow;
+
+/***/ }),
+/* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(14);
+
+	var RightArrow = function RightArrow(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'a',
+	      { className: 'right-arrow', onClick: function onClick() {
+	          props.onClick('left');
+	        } },
+	      '\u2039'
+	    )
+	  );
+	};
+
+	module.exports = RightArrow;
 
 /***/ })
 /******/ ]);
