@@ -26082,20 +26082,15 @@
 	      'div',
 	      { className: 'projects-footer' },
 	      React.createElement(
-	        'h2',
-	        null,
-	        'Projects Footer'
-	      ),
-	      React.createElement(
 	        'ul',
 	        null,
 	        React.createElement(
 	          'li',
 	          null,
 	          React.createElement(
-	            Link,
-	            { to: '/projects' },
-	            'Projects'
+	            'a',
+	            { href: 'https://instagram.com' },
+	            'LinkedIn'
 	          )
 	        ),
 	        React.createElement(
@@ -26105,6 +26100,24 @@
 	            'a',
 	            { href: 'https://instagram.com' },
 	            'Instagram'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            'a',
+	            { href: 'https://instagram.com' },
+	            'Download Resume'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/projects' },
+	            'Projects'
 	          )
 	        )
 	      )
@@ -26221,7 +26234,7 @@
 
 
 	// module
-	exports.push([module.id, ".projects-footer {\n  /*align-self: flex-end;*/\n}\n", ""]);
+	exports.push([module.id, ".projects-footer {\n  align-self: flex-end;\n  padding-bottom: 40px;\n}\n\n.projects-footer ul {\n  list-style-type: none;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  -webkit-padding-start: 0px;\n}\n\n.projects-footer li {\n  display: inline-block;\n  margin-left: 30px;\n}\n\n.projects-footer li a {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 400;\n  font-size: 0.67em;\n  text-decoration: none;\n  color: rgb(102, 102, 102);\n}\n\n.projects-footer li a:visited {\n  color: rgb(102, 102, 102);\n}\n\n.projects-footer li a:hover {\n  background-color: rgb(255, 255, 0);\n}\n", ""]);
 
 	// exports
 

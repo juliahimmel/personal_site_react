@@ -5,10 +5,11 @@ var ProjectsFooter = React.createClass({
   render: function () {
     return (
       <div className="projects-footer">
-        <h2>Projects Footer</h2>
         <ul>
-          <li><Link to='/projects'>Projects</Link></li>
+          <li><a href='https://instagram.com'>LinkedIn</a></li>
           <li><a href='https://instagram.com'>Instagram</a></li>
+          <li><a href='https://instagram.com'>Download Resume</a></li>
+          <li><Link to='/projects'>Projects</Link></li>
         </ul>
       </div>
     )
