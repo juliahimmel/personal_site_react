@@ -12,7 +12,6 @@ var Projects = React.createClass({
     return (
       <div className="projects-container">
         <ProjectsNav/>
-        {/* <AllProjects /> */}
         {this.props.children}
         <ProjectsFooter/>
       </div>

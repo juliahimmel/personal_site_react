@@ -23,3 +23,12 @@
 .projects-footer li a:hover {
   background-color: rgb(255, 255, 0);
 }
+
+@media (max-width: 750px) {
+  .projects-footer li {
+    display: block;
+  }
+  .projects-footer ul {
+    margin-right: 15px;
+  }
+}

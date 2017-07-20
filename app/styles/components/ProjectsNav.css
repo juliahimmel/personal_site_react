@@ -49,3 +49,25 @@ ul.projects-nav a.active {
   padding-right: 14px;
   font-size: 0.89em;
 }
+
+@media (max-width: 750px) {
+  .projects-nav {
+    white-space: nowrap;
+  }
+
+  .projects-nav a.index-link {
+    font-size: 0.623em;
+  }
+
+  .projects-nav a.projects-link,
+  .projects-nav a.one-project-link {
+    font-size: 0.819em;
+  }
+
+  .projects-nav a.projects-link,
+  ul.projects-nav a.active {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}

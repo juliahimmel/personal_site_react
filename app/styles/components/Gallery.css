@@ -42,15 +42,17 @@ img.gallery-image {
   margin-top: 10px;
 }
 
-@media (max-width: 650px) {
-  #gallery li {
+@media (max-width: 750px) {
+  .gallery-images li {
     text-align: center;
     display: block;
     padding: 0;
+    margin: 0;
   }
 
-  .images {
+  img.gallery-image {
     width: 100%;
+    height: auto;
     margin: 20px 0;
   }
 
