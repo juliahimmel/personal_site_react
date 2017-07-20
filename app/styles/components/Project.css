@@ -53,3 +53,9 @@
   margin-top: 9px;
   margin-bottom: 6px;
 }
+
+@media (max-width: 750px) {
+  .project-small {
+    width: 100%;
+  }
+}

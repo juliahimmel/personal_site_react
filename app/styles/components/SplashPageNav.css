@@ -30,3 +30,19 @@
   background-color: rgb(255, 255, 0);
   /*padding: 5px;*/
 }
+
+@media (max-width: 750px) {
+  .splash-page-nav ul {
+    white-space: nowrap;
+  }
+
+  .splash-page-nav li {
+    margin-right: 1.44em;
+  }
+}
+
+@media (max-width: 570px) {
+  .splash-page-nav ul {
+    font-size: 0.5em;
+  }
+}
