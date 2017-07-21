@@ -57,6 +57,7 @@ ul.projects-nav a.active {
 
   .projects-nav a.index-link {
     font-size: 0.623em;
+    padding-right: 10px;
   }
 
   .projects-nav a.projects-link,
