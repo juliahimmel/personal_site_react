@@ -31,12 +31,12 @@ export default {
           },
           {
             id: 4,
-            tags: ['code', 'design'],
-            title: 'Tattle App',
-            subtitle: 'Some subtitle',
-            shortDescription: 'A Short Description',
-            longDescription: 'A Long Description',
-            images: [""]
+            tags: ['design'],
+            title: 'Cocktail Cards',
+            subtitle: 'Personal project: illustrated postcards with recipes for classic cocktails',
+            shortDescription: 'I designed these illustrated postcards as a personal project. I created the cocktail illustrations in watercolor.',
+            longDescription: 'I designed these illustrated postcards as a personal project. I created the cocktail illustrations in watercolor.',
+            images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio2.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio3.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio4.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio5.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio6.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio7.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio8.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Cocktail+Cards/Cocktail+Cards+for+Portfolio9.jpg"]
           },
           {
             id: 5,
@@ -51,10 +51,10 @@ export default {
             id: 6,
             tags: ['code', 'design'],
             title: 'Tattle App',
-            subtitle: 'Some subtitle',
-            shortDescription: 'A Short Description',
-            longDescription: 'A Long Description',
-            images: [""]
+            subtitle: 'An app to help conscious consumers make informed choices',
+            shortDescription: 'Tattle let users type in the name of a product and learn whether it was owned by a larger company, whether the parent company had been the subject of any news stories that may interest a conscious consumer, and whether the product had any certifications, such as USDA Organic.',
+            longDescription: 'Tattle let users type in the name of a product and learn whether it was owned by a larger company, whether the parent company had been the subject of any news stories that may interest a conscious consumer, and whether the product had any certifications, such as USDA Organic. We used the Freebase and New York Times Article Search APIs, and built a database of certifications by hand, since there was no centralized repository of them and they came in a variety of file formats. I built this with three team members as my final project for Dev Bootcamp. I created the design for the app, and I contributed to the code by working on the NYT API integration and writing RSpec tests.',
+            images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Tattle/Screen+Shot+2014-06-18+at+3.30.28+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Tattle/Screen+Shot+2014-06-18+at+3.30.57+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Tattle/Screen+Shot+2014-06-18+at+3.31.07+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Tattle/Screen+Shot+2014-06-18+at+3.31.23+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Tattle/Screen+Shot+2014-06-18+at+3.31.35+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Tattle/Screen+Shot+2014-06-18+at+3.31.37+PM.png"]
           },
           {
             id: 7,
