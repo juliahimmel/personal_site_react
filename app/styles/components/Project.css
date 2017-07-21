@@ -1,10 +1,13 @@
 .project-small {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  /*display: inline-block;*/
   /*flex-basis: 30%;*/
   width: calc(33.3333% - 15px);
   /*max-height: 250px;*/
   padding-left: 6px;
   padding-right: 6px;
+  padding-bottom: 18px;
 }
 
 .project-small .title,
@@ -31,10 +34,30 @@
 }
 
 .project-small a {
+  position: relative;
   display: block;
   width: 100%;
   height: 50%;
   max-height: 100px;
+  min-height: 100px;
+  border: 1px solid rgb(0,255,255);
+  opacity: 0.5;
+}
+
+.project-small a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0,255,255);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.project-small a:hover::after {
+  opacity: 1.0;
 }
 
 .tag {
@@ -57,5 +80,9 @@
 @media (max-width: 750px) {
   .project-small {
     width: 100%;
+  }
+  .project-small a {
+    max-height: 50px;
+    min-height: 50px;
   }
 }

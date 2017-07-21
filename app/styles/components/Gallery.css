@@ -22,8 +22,8 @@ img.gallery-image {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 45%;
-  right: 0px;
+  top: 55%;
+  right: 12px;
 }
 
 .right-arrow, .left-arrow {
@@ -34,12 +34,12 @@ img.gallery-image {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
   cursor: pointer;
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255,0,255);
+  color: white;
 }
 
-.left-arrow {
-  margin-top: 10px;
+.right-arrow {
+  margin-top: 12px;
 }
 
 @media (max-width: 750px) {
