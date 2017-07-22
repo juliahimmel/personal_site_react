@@ -25891,7 +25891,7 @@
 	          null,
 	          React.createElement(
 	            'a',
-	            { href: 'https://instagram.com', target: '_blank' },
+	            { href: 'https://www.linkedin.com/in/julia-himmel-a785087/', target: '_blank' },
 	            'LinkedIn'
 	          )
 	        ),
@@ -25900,7 +25900,7 @@
 	          null,
 	          React.createElement(
 	            'a',
-	            { href: 'https://instagram.com', target: '_blank' },
+	            { href: 'https://www.instagram.com/himmeljulia/', target: '_blank' },
 	            'Instagram'
 	          )
 	        ),
@@ -26448,7 +26448,7 @@
 	          null,
 	          React.createElement(
 	            'a',
-	            { href: 'https://instagram.com', target: '_blank' },
+	            { href: 'https://www.linkedin.com/in/julia-himmel-a785087/', target: '_blank' },
 	            'LinkedIn'
 	          )
 	        ),
@@ -26457,7 +26457,7 @@
 	          null,
 	          React.createElement(
 	            'a',
-	            { href: 'https://instagram.com', target: '_blank' },
+	            { href: 'https://www.instagram.com/himmeljulia/', target: '_blank' },
 	            'Instagram'
 	          )
 	        ),
