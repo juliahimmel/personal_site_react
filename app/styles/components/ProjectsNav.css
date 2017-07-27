@@ -73,3 +73,13 @@ ul.projects-nav a.active {
   }
 
 }
+
+@media (max-width: 330px) {
+  .projects-nav a.index-link {
+    margin-top: 9px;
+  }
+  .projects-nav a.projects-link,
+  .projects-nav a.one-project-link {
+    font-size: 0.719em;
+  }
+}
