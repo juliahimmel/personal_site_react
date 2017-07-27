@@ -1,7 +1,10 @@
+ul.projects-nav {
+  display: flex;
+  flex-direction: row;
+}
+
 ul.projects-nav li {
   display: inline-block;
-  /*margin-right: 2.44em;*/
-  /*margin-right: 44px;*/
 }
 
 .projects-nav a {
@@ -51,13 +54,11 @@ ul.projects-nav a.active {
 }
 
 @media (max-width: 750px) {
-  .projects-nav {
-    white-space: nowrap;
-  }
-
   .projects-nav a.index-link {
     font-size: 0.623em;
-    padding-right: 10px;
+    padding-right: 9px;
+    margin-top: 11px;
+    white-space: nowrap;
   }
 
   .projects-nav a.projects-link,
@@ -67,8 +68,8 @@ ul.projects-nav a.active {
 
   .projects-nav a.projects-link,
   ul.projects-nav a.active {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 
 }
