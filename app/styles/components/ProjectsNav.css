@@ -51,6 +51,7 @@ ul.projects-nav a.active {
   letter-spacing: 0.3em;
   padding-right: 14px;
   font-size: 0.89em;
+  margin-top: 17px;
 }
 
 @media (max-width: 750px) {
