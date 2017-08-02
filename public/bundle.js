@@ -218,7 +218,7 @@
 
 
 	// module
-	exports.push([module.id, ".splash-page {\n  padding-top: 4em;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.splash-page h1 {\n  font-family: 'Merriweather', serif;\n  font-weight: 400;\n  font-size: 2em;\n  text-align: center;\n  margin-bottom: 1.1em;\n}\n\n.splash-page h1::after {\n  content: \"\";\n  display: block;\n  margin: 0 auto;\n  margin-top: 0.95em;\n  top: 0;\n  left: 0;\n  height: 1px;\n  width: 0.7em;\n  border-bottom: 9px solid rgb(255,0,255);\n}\n\n\n.intro-text {\n  font-family: 'Merriweather', serif;\n  font-weight: 300;\n  font-size: 1.167em;\n  text-align: center;\n}\n\n@media (max-width: 420px) {\n  .splash-page {\n    margin-top: 3em;\n  }\n}\n\n@media (min-width: 768px) {\n  .splash-text-wrapper {\n    max-width: 45%;\n    margin: 0 auto;\n  }\n}\n", ""]);
+	exports.push([module.id, ".splash-page {\n  padding-top: 4em;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.splash-page h1 {\n  font-family: 'Merriweather', serif;\n  font-weight: 400;\n  font-size: 2em;\n  text-align: center;\n  margin-bottom: 1.1em;\n}\n\n.splash-page h1::after {\n  content: \"\";\n  display: block;\n  margin: 0 auto;\n  margin-top: 0.95em;\n  top: 0;\n  left: 0;\n  height: 1px;\n  width: 0.7em;\n  border-bottom: 9px solid rgb(255,0,255);\n}\n\n\n.intro-text {\n  font-family: 'Merriweather', serif;\n  font-weight: 300;\n  font-size: 1.167em;\n  text-align: center;\n}\n\n@media (max-width: 420px) {\n  .splash-page {\n    margin-top: 0em;\n  }\n}\n\n@media (min-width: 768px) {\n  .splash-text-wrapper {\n    max-width: 45%;\n    margin: 0 auto;\n  }\n}\n", ""]);
 
 	// exports
 
