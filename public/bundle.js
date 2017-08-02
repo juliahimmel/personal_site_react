@@ -232,7 +232,7 @@
 
 
 	// module
-	exports.push([module.id, ".splash-page-nav ul {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 400;\n  font-size: 0.667em;\n  list-style-type: none;\n  text-align: center;\n  margin-top: 4em;\n}\n\n.splash-page-nav li {\n  display: inline;\n  margin-right: 2.44em;\n}\n\n.splash-page-nav li:last-of-type {\n  margin-right: 0;\n}\n\n.splash-page-nav li a {\n  text-decoration: none;\n  color: black;\n}\n\n.zapf_arrow {\n  font-family: 'ZapfDingbatsStd', sans-serif;\n}\n\n\n.splash-page-nav li a:hover {\n  background-color: rgb(255, 255, 0);\n  /*padding: 5px;*/\n}\n\n@media (max-width: 750px) {\n  .splash-page-nav ul {\n    white-space: nowrap;\n  }\n\n  .splash-page-nav li {\n    margin-right: 1.44em;\n  }\n}\n\n@media (max-width: 570px) {\n  .splash-page-nav ul {\n    font-size: 0.5em;\n  }\n}\n", ""]);
+	exports.push([module.id, ".splash-page-nav ul {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 400;\n  font-size: 0.667em;\n  list-style-type: none;\n  text-align: center;\n  margin-top: 4em;\n}\n\n.splash-page-nav li {\n  display: inline;\n  margin-right: 2.44em;\n}\n\n.splash-page-nav li:last-of-type {\n  margin-right: 0;\n}\n\n.splash-page-nav li a {\n  text-decoration: none;\n  color: black;\n}\n\n.zapf_arrow {\n  font-family: 'ZapfDingbatsStd', sans-serif;\n}\n\n\n.splash-page-nav li a:hover {\n  background-color: rgb(255, 255, 0);\n  /*padding: 5px;*/\n}\n\n@media (max-width: 750px) {\n  .splash-page-nav ul {\n    white-space: nowrap;\n  }\n\n  .splash-page-nav li {\n    margin-right: 1.44em;\n  }\n}\n\n@media (max-width: 570px) {\n  .splash-page-nav ul {\n    font-size: 0.609em;\n  }\n}\n", ""]);
 
 	// exports
 
