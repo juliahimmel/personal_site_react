@@ -260,7 +260,7 @@
 
 
 	// module
-	exports.push([module.id, ".all-projects {\n  display: flex;\n  flex: 1;\n  flex-direction: row;\n  flex-wrap: wrap;\n  margin-left: -6px;\n  margin-right: -6px;\n  min-height: 200px;\n  padding-top: 3.28em;\n}\n", ""]);
+	exports.push([module.id, ".all-projects {\n  display: flex;\n  flex: 1;\n  flex-direction: row;\n  flex-wrap: wrap;\n  margin-left: -12px;\n  margin-right: -12px;\n  min-height: 200px;\n  padding-top: 3.28em;\n}\n", ""]);
 
 	// exports
 
@@ -274,7 +274,7 @@
 
 
 	// module
-	exports.push([module.id, ".project-small {\n  display: flex;\n  flex-direction: column;\n  /*display: inline-block;*/\n  /*flex-basis: 30%;*/\n  width: calc(33.3333% - 15px);\n  /*max-height: 250px;*/\n  padding-left: 6px;\n  padding-right: 6px;\n  padding-bottom: 18px;\n}\n\n.project-small .title,\n.project-small .subtitle,\n.project-small .short-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 3px;\n}\n\n.project-small .title {\n  font-weight: 900;\n}\n\n.project-small .subtitle,\n.project-small .short-description {\n  font-weight: 400;\n}\n\n.project-small .short-description {\n  font-style: italic;\n}\n\n.project-small a {\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 50%;\n  max-height: 100px;\n  min-height: 100px;\n  border: 1px solid rgb(211,211,211);\n}\n\n.tag {\n  display: inline-block;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  font-size: 0.33em;\n  padding: 0.33em;\n  background-color: rgb(255,0,255);\n  color: white;\n  margin-right: 0.66em;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-top: 9px;\n  margin-bottom: 6px;\n}\n\n@media (max-width: 750px) {\n  .project-small {\n    width: 100%;\n  }\n  .project-small a {\n    max-height: 50px;\n    min-height: 50px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".project-small {\n  display: flex;\n  flex-direction: column;\n  /*display: inline-block;*/\n  /*flex-basis: 30%;*/\n  width: calc(33.3333% - 15px);\n  /*max-height: 250px;*/\n  padding-left: 12px;\n  padding-right: 12px;\n  padding-bottom: 24px;\n}\n\n.project-small .title,\n.project-small .subtitle,\n.project-small .short-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 6px;\n}\n\n.project-small .title {\n  font-weight: 900;\n}\n\n.project-small .subtitle,\n.project-small .short-description {\n  font-weight: 400;\n}\n\n.project-small .short-description {\n  font-style: italic;\n}\n\n.project-small a {\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 50%;\n  max-height: 100px;\n  min-height: 100px;\n  border: 1px solid rgb(211,211,211);\n}\n\n.tag {\n  display: inline-block;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  font-size: 0.33em;\n  padding: 0.33em;\n  background-color: rgb(255,0,255);\n  color: white;\n  margin-right: 0.66em;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-top: 9px;\n  margin-bottom: 6px;\n}\n\n@media (max-width: 750px) {\n  .project-small {\n    width: 100%;\n  }\n  .project-small a {\n    max-height: 50px;\n    min-height: 50px;\n  }\n}\n", ""]);
 
 	// exports
 
