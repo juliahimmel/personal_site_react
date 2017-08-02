@@ -16,7 +16,7 @@
   content: "";
   display: block;
   margin: 0 auto;
-  margin-top: 1em;
+  margin-top: 0.95em;
   top: 0;
   left: 0;
   height: 1px;
@@ -30,6 +30,12 @@
   font-weight: 300;
   font-size: 1.167em;
   text-align: center;
+}
+
+@media (max-width: 420px) {
+  .splash-page {
+    margin-top: 3em;
+  }
 }
 
 @media (min-width: 768px) {
