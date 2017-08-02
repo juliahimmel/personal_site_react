@@ -30,7 +30,18 @@ ul.projects-nav a.active {
   padding-right: 14px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  position: relative;
+  /*border-left: 1px solid black;*/
+}
+
+.projects-nav a.projects-link::before,
+ul.projects-nav a.active::before {
+  content: "";
+  position: absolute;
+  top: 0.03em;
   border-left: 1px solid black;
+  height: 2.5em;
+  left: 0px;
 }
 
 .projects-nav a.projects-link,
@@ -69,18 +80,18 @@ ul.projects-nav a.active {
 
   .projects-nav a.projects-link,
   ul.projects-nav a.active {
-    padding-left: 9px;
-    padding-right: 9px;
+    padding-left: 0.56em;
+    padding-right: 0.56em;
   }
 
 }
 
 @media (max-width: 330px) {
   .projects-nav a.index-link {
-    margin-top: 9px;
+    margin-top: 8px;
   }
   .projects-nav a.projects-link,
   .projects-nav a.one-project-link {
-    font-size: 0.719em;
+    font-size: 0.7em;
   }
 }
