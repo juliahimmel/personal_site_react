@@ -29,5 +29,6 @@
   /*font-style: italic;*/
   font-size: 0.83em;
   line-height: 1.6;
-  color: rgb(86,85,85);
+  /*color: rgb(86,85,85);*/
+  font-weight: 300;
 }
