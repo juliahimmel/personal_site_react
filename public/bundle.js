@@ -26316,8 +26316,8 @@
 	    tags: ['design'],
 	    title: 'Book cover for Alice Munro collection',
 	    subtitle: 'Too Much Happiness',
-	    shortDescription: 'This was a personal project, as Too Much Happiness is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand, and made the illustration for the back cover.',
-	    longDescription: 'This was a personal project, as Too Much Happiness is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand, and made the illustration for the back cover.',
+	    shortDescription: 'This was a personal project, as Too Much Happiness is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand in Photoshop, and made the illustration for the back cover.',
+	    longDescription: 'This was a personal project, as Too Much Happiness is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand in Photoshop, and made the illustration for the back cover.',
 	    images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Alice+Munro+book+cover/Alice+Munro+Front+for+Ipad.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Alice+Munro+book+cover/Alice+Munro+back+for+Ipad.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Alice+Munro+book+cover/Alice+Munro+fo+iPad+Portfolio.jpg"]
 	  }]
 	};
