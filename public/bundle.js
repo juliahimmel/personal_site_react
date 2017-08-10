@@ -316,7 +316,7 @@
 
 
 	// module
-	exports.push([module.id, ".one-project {\n  padding-top: 25px;\n  padding-bottom: 9px;\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n}\n\n.one-project .title,\n.one-project .subtitle,\n.one-project .long-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 3px;\n}\n\n.one-project .title {\n  font-weight: 900;\n}\n\n.one-project .subtitle,\n.one-project .long-description {\n  font-weight: 400;\n}\n\n.one-project .long-description {\n  /*font-style: italic;*/\n  font-size: 0.83em;\n  line-height: 1.6;\n  color: rgb(86,85,85);\n}\n", ""]);
+	exports.push([module.id, ".one-project {\n  padding-top: 25px;\n  padding-bottom: 9px;\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n}\n\n.one-project .title,\n.one-project .subtitle,\n.one-project .long-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 6px;\n}\n\n.one-project .title {\n  font-weight: 900;\n}\n\n.one-project .subtitle,\n.one-project .long-description {\n  font-weight: 400;\n}\n\n.one-project .long-description {\n  /*font-style: italic;*/\n  font-size: 0.83em;\n  line-height: 1.6;\n  color: rgb(86,85,85);\n}\n", ""]);
 
 	// exports
 
