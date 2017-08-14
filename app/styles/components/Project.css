@@ -38,7 +38,7 @@
   /*color: rgb(86,85,85);*/
 }
 
-.project-small a {
+.project-small a.image-link {
   position: relative;
   display: block;
   width: 100%;

@@ -17,6 +17,14 @@ ul {
   -webkit-padding-start: 0px;
 }
 
+a,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 @media (min-width: 768px) {
   body {
     padding-left: 50px;

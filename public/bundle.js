@@ -204,7 +204,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  box-sizing: border-box;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  font-size: 112.5%;\n}\n\nul {\n  list-style-type: none;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  -webkit-padding-start: 0px;\n}\n\n@media (min-width: 768px) {\n  body {\n    padding-left: 50px;\n    padding-right: 50px;\n  }\n}\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  font-size: 112.5%;\n}\n\nul {\n  list-style-type: none;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  -webkit-padding-start: 0px;\n}\n\na,\na:active,\na:visited,\na:hover {\n  text-decoration: none;\n  color: black;\n}\n\n@media (min-width: 768px) {\n  body {\n    padding-left: 50px;\n    padding-right: 50px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -274,7 +274,7 @@
 
 
 	// module
-	exports.push([module.id, ".project-small {\n  display: flex;\n  flex-direction: column;\n  /*display: inline-block;*/\n  /*flex-basis: 30%;*/\n  width: calc(33.3333% - 15px);\n  /*max-height: 250px;*/\n  padding-left: 12px;\n  padding-right: 12px;\n  padding-bottom: 24px;\n}\n\n.project-small .title,\n.project-small .subtitle,\n.project-small .short-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 6px;\n}\n\n.project-small .title {\n  font-weight: 900;\n}\n\n.project-small .subtitle,\n.project-small .short-description {\n  font-weight: 400;\n}\n\n.project-small .short-description {\n  /*font-style: italic;*/\n  font-size: 0.83em;\n  line-height: 1.6;\n  font-weight: 300;\n\n  /*color: rgb(86,85,85);*/\n}\n\n.project-small a {\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 50%;\n  max-height: 100px;\n  min-height: 100px;\n  border: 1px solid rgb(211,211,211);\n}\n\n.tag {\n  display: inline-block;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  font-size: 0.33em;\n  padding: 0.33em;\n  background-color: rgb(255,0,255);\n  color: white;\n  margin-right: 0.66em;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-top: 9px;\n  margin-bottom: 6px;\n}\n\n@media (max-width: 750px) {\n  .project-small {\n    width: 100%;\n  }\n  .project-small a {\n    max-height: 50px;\n    min-height: 50px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".project-small {\n  display: flex;\n  flex-direction: column;\n  /*display: inline-block;*/\n  /*flex-basis: 30%;*/\n  width: calc(33.3333% - 15px);\n  /*max-height: 250px;*/\n  padding-left: 12px;\n  padding-right: 12px;\n  padding-bottom: 24px;\n}\n\n.project-small .title,\n.project-small .subtitle,\n.project-small .short-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 6px;\n}\n\n.project-small .title {\n  font-weight: 900;\n}\n\n.project-small .subtitle,\n.project-small .short-description {\n  font-weight: 400;\n}\n\n.project-small .short-description {\n  /*font-style: italic;*/\n  font-size: 0.83em;\n  line-height: 1.6;\n  font-weight: 300;\n\n  /*color: rgb(86,85,85);*/\n}\n\n.project-small a.image-link {\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 50%;\n  max-height: 100px;\n  min-height: 100px;\n  border: 1px solid rgb(211,211,211);\n}\n\n.tag {\n  display: inline-block;\n  font-family: 'Roboto', sans-serif;\n  font-weight: 900;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  font-size: 0.33em;\n  padding: 0.33em;\n  background-color: rgb(255,0,255);\n  color: white;\n  margin-right: 0.66em;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-top: 9px;\n  margin-bottom: 6px;\n}\n\n@media (max-width: 750px) {\n  .project-small {\n    width: 100%;\n  }\n  .project-small a {\n    max-height: 50px;\n    min-height: 50px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -26002,7 +26002,11 @@
 	      React.createElement(
 	        'h4',
 	        { className: 'title' },
-	        title
+	        React.createElement(
+	          Link,
+	          { to: { pathname: '/projects/' + id } },
+	          title
+	        )
 	      ),
 	      React.createElement(
 	        'h5',
