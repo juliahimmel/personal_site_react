@@ -26177,6 +26177,7 @@
 
 	    var renderImages = function renderImages(tags) {
 	      var images = _this.props.images;
+	      window.scrollTo(0, 0);
 
 	      return images.map(function (imageLink, i) {
 	        return React.createElement(

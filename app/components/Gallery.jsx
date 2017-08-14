@@ -7,6 +7,7 @@ var Gallery = React.createClass({
 
     var renderImages = (tags) => {
       var images = this.props.images;
+      window.scrollTo( 0, 0 );
 
       return images.map((imageLink, i) => {
         return (
