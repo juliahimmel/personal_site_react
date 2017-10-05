@@ -3,7 +3,14 @@
   padding-bottom: 9px;
   display: flex;
   flex: 1;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.proj-description {
+  width: calc(33.3333% - 15px);
+  padding-right: 12px;
+  padding-bottom: 24px;
 }
 
 .one-project .title,
@@ -26,9 +33,14 @@
 }
 
 .one-project .long-description {
-  /*font-style: italic;*/
   font-size: 0.83em;
   line-height: 1.6;
-  /*color: rgb(86,85,85);*/
   font-weight: 300;
+}
+
+@media (max-width: 750px) {
+  .proj-description {
+    width: 100%;
+    padding-bottom: 24px;
+  }
 }

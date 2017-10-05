@@ -26,10 +26,12 @@ var OneProject = React.createClass({
 
     return (
       <div className="one-project">
-        <Tags tags={tags}/>
-        <h2 className="title">{title}</h2>
-        <h3 className="subtitle">{subtitle}</h3>
-        <h4 className="long-description">{longDescription}</h4>
+        <div className="proj-description">
+          <Tags tags={tags}/>
+          <h2 className="title">{title}</h2>
+          <h3 className="subtitle">{subtitle}</h3>
+          <h4 className="long-description">{longDescription}</h4>
+        </div>
         <Gallery images={images} onClick={this.handleClick}/>
       </div>
     )

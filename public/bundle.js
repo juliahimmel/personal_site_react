@@ -316,7 +316,7 @@
 
 
 	// module
-	exports.push([module.id, ".one-project {\n  padding-top: 25px;\n  padding-bottom: 9px;\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n}\n\n.one-project .title,\n.one-project .subtitle,\n.one-project .long-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 6px;\n}\n\n.one-project .title {\n  font-weight: 900;\n}\n\n.one-project .subtitle,\n.one-project .long-description {\n  font-weight: 400;\n}\n\n.one-project .long-description {\n  /*font-style: italic;*/\n  font-size: 0.83em;\n  line-height: 1.6;\n  /*color: rgb(86,85,85);*/\n  font-weight: 300;\n}\n", ""]);
+	exports.push([module.id, ".one-project {\n  padding-top: 25px;\n  padding-bottom: 9px;\n  display: flex;\n  flex: 1;\n  flex-direction: row;\n  flex-wrap: wrap;\n}\n\n.proj-description {\n  width: calc(33.3333% - 15px);\n  padding-right: 12px;\n  padding-bottom: 24px;\n}\n\n.one-project .title,\n.one-project .subtitle,\n.one-project .long-description {\n  font-size: 1em;\n  font-family: 'Merriweather', serif;\n  -webkit-margin-before: 0em;\n  -webkit-margin-after: 0em;\n  margin-bottom: 6px;\n}\n\n.one-project .title {\n  font-weight: 900;\n}\n\n.one-project .subtitle,\n.one-project .long-description {\n  font-weight: 400;\n}\n\n.one-project .long-description {\n  font-size: 0.83em;\n  line-height: 1.6;\n  font-weight: 300;\n}\n\n@media (max-width: 750px) {\n  .proj-description {\n    width: 100%;\n    padding-bottom: 24px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -330,7 +330,7 @@
 
 
 	// module
-	exports.push([module.id, "ul.gallery-images {\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  overflow-x: scroll;\n  overflow-y: hidden;\n  width: 100%;\n  margin-top: 18px;\n}\n\n.gallery-images li {\n  display: inline;\n  margin-right: 12px;\n}\n\nimg.gallery-image {\n  height: 450px;\n  align: top;\n}\n\n.arrows {\n  margin: 0;\n  padding: 0;\n  position: absolute;\n  top: 55%;\n  right: 12px;\n}\n\n.right-arrow, .left-arrow {\n  display: block;\n  width: 17px;\n  padding: 0;\n  text-align: center;\n  font-family: 'Roboto', sans-serif;\n  font-size: 1.3em;\n  cursor: pointer;\n  background-color: rgb(255,0,255);\n  color: white;\n}\n\n.right-arrow:hover,\n.left-arrow:hover {\n  color: white;\n  background-color: rgb(255, 255, 0);\n}\n\n.right-arrow {\n  margin-top: 12px;\n}\n\n@media (max-width: 750px) {\n  .gallery-images li {\n    text-align: center;\n    display: block;\n    padding: 0;\n    margin: 0;\n  }\n\n  img.gallery-image {\n    width: 100%;\n    height: auto;\n    margin: 20px 0;\n  }\n\n  .arrows {\n    display: none;\n  }\n}\n", ""]);
+	exports.push([module.id, ".gallery-container {\n  width: calc(66.6666% - 15px);\n}\n\nul.gallery-images {\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  height: 80vh;\n  overflow-y: scroll;\n}\n\n.gallery-images li {\n  padding-left: 12px;\n  padding-bottom: 24px;\n  width: 100%;\n}\n\nimg.gallery-image {\n  align: top;\n  width: 100%;\n}\n\n@media (max-width: 750px) {\n  .gallery-container {\n    width: 100%;\n  }\n\n  .gallery-images li {\n    text-align: center;\n    display: block;\n    padding: 0;\n    margin: 0;\n  }\n  \n  img.gallery-image {\n    width: 100%;\n    height: auto;\n    margin: 20px 0;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -26104,21 +26104,25 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'one-project' },
-	      React.createElement(Tags, { tags: tags }),
 	      React.createElement(
-	        'h2',
-	        { className: 'title' },
-	        title
-	      ),
-	      React.createElement(
-	        'h3',
-	        { className: 'subtitle' },
-	        subtitle
-	      ),
-	      React.createElement(
-	        'h4',
-	        { className: 'long-description' },
-	        longDescription
+	        'div',
+	        { className: 'proj-description' },
+	        React.createElement(Tags, { tags: tags }),
+	        React.createElement(
+	          'h2',
+	          { className: 'title' },
+	          title
+	        ),
+	        React.createElement(
+	          'h3',
+	          { className: 'subtitle' },
+	          subtitle
+	        ),
+	        React.createElement(
+	          'h4',
+	          { className: 'long-description' },
+	          longDescription
+	        )
 	      ),
 	      React.createElement(Gallery, { images: images, onClick: this.handleClick })
 	    );
@@ -26163,14 +26167,12 @@
 /* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(15);
-	var RightArrow = __webpack_require__(242);
-	var LeftArrow = __webpack_require__(243);
 
 	var Gallery = React.createClass({
-	  displayName: 'Gallery',
+	  displayName: "Gallery",
 
 	  render: function render() {
 	    var _this = this;
@@ -26181,26 +26183,20 @@
 
 	      return images.map(function (imageLink, i) {
 	        return React.createElement(
-	          'li',
+	          "li",
 	          { key: i },
-	          React.createElement('img', { src: imageLink, className: 'gallery-image' })
+	          React.createElement("img", { src: imageLink, className: "gallery-image" })
 	        );
 	      });
 	    };
 
 	    return React.createElement(
-	      'div',
-	      { className: 'gallery-container' },
+	      "div",
+	      { className: "gallery-container" },
 	      React.createElement(
-	        'ul',
-	        { className: 'gallery-images', id: 'gallery' },
+	        "ul",
+	        { className: "gallery-images", id: "gallery" },
 	        renderImages()
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'arrows' },
-	        React.createElement(RightArrow, { onClick: this.props.onClick }),
-	        React.createElement(LeftArrow, { onClick: this.props.onClick })
 	      )
 	    );
 	  }
