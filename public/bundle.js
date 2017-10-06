@@ -25907,7 +25907,7 @@
 	          null,
 	          React.createElement(
 	            'a',
-	            { href: 'https://s3.amazonaws.com/julia-himmel-personal-site/julia_himmel_resume_may_2017.pdf', target: '_blank' },
+	            { href: 'https://s3.amazonaws.com/julia-himmel-personal-site/julia_himmel_resume_oct_2017.pdf', target: '_blank' },
 	            'Download Resume'
 	          )
 	        ),
@@ -26419,7 +26419,7 @@
 	          null,
 	          React.createElement(
 	            'a',
-	            { href: 'https://s3.amazonaws.com/julia-himmel-personal-site/julia_himmel_resume_may_2017.pdf', target: '_blank' },
+	            { href: 'https://s3.amazonaws.com/julia-himmel-personal-site/julia_himmel_resume_oct_2017.pdf', target: '_blank' },
 	            'Download Resume'
 	          )
 	        ),
