@@ -328,7 +328,7 @@
 
 
 	// module
-	exports.push([module.id, ".gallery-container {\n  width: calc(66.6666% - 15px);\n}\n\nul.gallery-images {\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  height: 80vh;\n  overflow-y: scroll;\n}\n\n.gallery-images li {\n  padding-left: 12px;\n  padding-bottom: 24px;\n  width: 100%;\n}\n\nimg.gallery-image {\n  align: top;\n  width: 100%;\n}\n\n@media (max-width: 750px) {\n  .gallery-container {\n    width: 100%;\n  }\n\n  .gallery-images li {\n    text-align: center;\n    display: block;\n    padding: 0;\n    margin: 0;\n  }\n  \n  img.gallery-image {\n    width: 100%;\n    height: auto;\n    margin: 20px 0;\n  }\n}\n", ""]);
+	exports.push([module.id, ".gallery-container {\n  width: calc(66.6666% - 15px);\n}\n\nul.gallery-images {\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  height: 80vh;\n  overflow-y: scroll;\n}\n\n.gallery-images li {\n  padding-left: 12px;\n  padding-bottom: 24px;\n  width: 100%;\n}\n\nimg.gallery-image {\n  align: top;\n  width: 100%;\n}\n\n@media (max-width: 750px) {\n  .gallery-container {\n    width: 100%;\n  }\n\n  ul.gallery-images {\n    height: auto;\n    overflow-y: auto;\n  }\n\n  .gallery-images li {\n    text-align: center;\n    display: block;\n    padding: 0;\n    margin: 0;\n  }\n\n  img.gallery-image {\n    width: 100%;\n    height: auto;\n    margin: 20px 0;\n  }\n}\n", ""]);
 
 	// exports
 
