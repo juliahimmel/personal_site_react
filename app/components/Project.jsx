@@ -11,7 +11,7 @@ var Project = React.createClass({
 
     return (
       <div className="project-small">
-        <Link style={{background: 'url("' + images[0] + '") 50% 40% no-repeat'}} className="image-link" to={ {pathname: `/projects/${id}`}}/>
+        <Link style={{background: 'url("' + images[0] + '") 50% 40% / 700px auto no-repeat'}} className="image-link" to={ {pathname: `/projects/${id}`}}/>
         <Tags tags={tags}/>
         <h4 className="title"><Link to={ {pathname: `/projects/${id}`}}>{title}</Link></h4>
         <h5 className="subtitle">{subtitle}</h5>

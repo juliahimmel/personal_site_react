@@ -25995,7 +25995,7 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'project-small' },
-	      React.createElement(Link, { style: { background: 'url("' + images[0] + '") 50% 40% no-repeat' }, className: 'image-link', to: { pathname: '/projects/' + id } }),
+	      React.createElement(Link, { style: { background: 'url("' + images[0] + '") 50% 40% / 700px auto no-repeat' }, className: 'image-link', to: { pathname: '/projects/' + id } }),
 	      React.createElement(Tags, { tags: tags }),
 	      React.createElement(
 	        'h4',
