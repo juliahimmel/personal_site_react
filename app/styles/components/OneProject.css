@@ -1,5 +1,5 @@
 .one-project {
-  padding-top: 25px;
+  padding-top: 65px;
   padding-bottom: 9px;
   display: flex;
   flex: 1;
@@ -42,5 +42,8 @@
   .proj-description {
     width: 100%;
     padding-bottom: 24px;
+  }
+  .one-project {
+    padding-top: 25px;
   }
 }
