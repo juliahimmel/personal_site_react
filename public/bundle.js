@@ -70,8 +70,6 @@
 	var OneProject = __webpack_require__(240);
 	var Tags = __webpack_require__(239);
 	var Gallery = __webpack_require__(241);
-	var RightArrow = __webpack_require__(242);
-	var LeftArrow = __webpack_require__(243);
 
 
 	ReactDOM.render(React.createElement(
@@ -26205,54 +26203,8 @@
 	module.exports = Gallery;
 
 /***/ }),
-/* 242 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(15);
-
-	var RightArrow = function RightArrow(props) {
-	  return React.createElement(
-	    'div',
-	    null,
-	    React.createElement(
-	      'a',
-	      { className: 'right-arrow', onClick: function onClick() {
-	          props.onClick('right');
-	        } },
-	      '\u203A'
-	    )
-	  );
-	};
-
-	module.exports = RightArrow;
-
-/***/ }),
-/* 243 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(15);
-
-	var RightArrow = function RightArrow(props) {
-	  return React.createElement(
-	    'div',
-	    null,
-	    React.createElement(
-	      'a',
-	      { className: 'right-arrow', onClick: function onClick() {
-	          props.onClick('left');
-	        } },
-	      '\u2039'
-	    )
-	  );
-	};
-
-	module.exports = RightArrow;
-
-/***/ }),
+/* 242 */,
+/* 243 */,
 /* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26270,19 +26222,19 @@
 	    title: 'CareerFoundry Style Guide',
 	    subtitle: 'A style guide used throughout the CareerFoundry application and marketing collateral',
 	    shortDescription: 'I created this style guide for CareerFoundry to ensure consistency throughout the brand.',
-	    longDescription: "CareerFoundry had hired a freelance designer to create a brand for the company, and she chose fonts and colors. But, without further guidance, developers and designers who worked on features for CareerFoundry would make font and color decisions on the fly, leading to a lack of consistency across the application and brand. I created a small, clear style guide when I started at the company, and it\'s still in heavy use today.",
+	    longDescription: "CareerFoundry had hired a freelance designer to create a brand for the company, and she chose fonts and colors. But, without further guidance, developers who worked on features for CareerFoundry would make font and color decisions on the fly, leading to a lack of consistency across the application and brand. I created a small, clear style guide aimed at developers when I started at the company, and it\'s still in heavy use today.",
 	    images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Brandbook/Screen+Shot+2017-04-28+at+3.35.41+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Brandbook/Screen+Shot+2017-04-28+at+3.35.57+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Brandbook/Screen+Shot+2017-04-28+at+3.36.08+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Brandbook/Screen+Shot+2017-04-28+at+3.36.17+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Brandbook/Screen+Shot+2017-04-28+at+3.36.28+PM.png"]
 	  }, {
 	    id: 1,
-	    tags: ['code', 'design'],
+	    tags: ['code', 'design', 'ux'],
 	    title: 'CareerFoundry Student Dashboard',
 	    subtitle: 'Complete dashboard redesign for CareerFoundry',
 	    shortDescription: 'CareerFoundry sells online, mentored courses, and the student dashboard is crucial for motivating students to continue a course, supporting the relationship with the mentor, and letting students get where they want to go within a course.',
-	    longDescription: 'CareerFoundry sells online, mentored courses, and the student dashboard is crucial for motivating students to continue a course, supporting the relationship with the mentor, and letting students get where they want to go within a course. With the guidance of a senior UX designer, I created an information architecture and sketched wireframes, and, after several rounds of feedback from the cofounders, created prototypes and conducted user testing sessions with CareerFoundry students  in our office. Then, I worked with another developer to build the dashboard.',
-	    images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/cf-dash-sketch-v1.JPG", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/CF-dash-june-15-v2.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/CF-dash-june-15-v4+(1).jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/CF-dash-june-15-v6_June+25-3.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-11-05+at+14.07.10.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-12-09+at+17.39.52.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-12-09+at+17.44.24.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-12-09+at+17.44.50.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2017-01-02+at+11.57.08.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2017-04-28+at+1.40.48+PM.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2017-04-28+at+1.41.02+PM.png"]
+	    longDescription: 'CareerFoundry sells online, mentored courses, and the student dashboard is crucial for motivating students to continue a course, supporting the relationship with the mentor, and letting students get where they want to go within a course. The dashboard was due for a redesign: students were not taking all of their mentor calls and struggled to navigate to their lessons. With the guidance of a senior UX designer, I created an information architecture and sketched wireframes, and, after several rounds of feedback from the cofounders, created prototypes and conducted user testing sessions with CareerFoundry students in our office. Then, I worked with another developer to build the dashboard.',
+	    images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/cf-dash-sketch-v1.JPG", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/CF-dash-june-15-v2.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/CF-dash-june-15-v4+(1).jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/CF-dash-june-15-v6_June+25-3.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-11-05+at+14.07.10.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-12-09+at+17.39.52.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-12-09+at+17.44.24.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2015-12-09+at+17.44.50.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2017-01-02+at+11.57.08.png", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/CareerFoundry+Dashboard/Screen+Shot+2017-04-28+at+1.41.02+PM.png"]
 	  }, {
 	    id: 2,
-	    tags: ['code', 'design'],
+	    tags: ['code', 'design', 'ux'],
 	    title: 'CareerFoundry Course Prep',
 	    subtitle: 'An onboarding site for CareerFoundry students',
 	    shortDescription: 'With guidance from a senior UX designer, I took an onboarding site from wireframes through prototyping and user testing, then built it with one other developer.',
@@ -26301,7 +26253,7 @@
 	    tags: ['design'],
 	    title: 'Try The World',
 	    subtitle: 'Branding and collateral for a new startup',
-	    shortDescription: 'Logo, branding, packaging, and collateral for Try The World, a company that sells subscription boxes of specialty foods from around the world',
+	    shortDescription: 'Logo, branding, packaging, art direction, and collateral for Try The World, a company that sells subscription boxes of specialty foods from around the world',
 	    longDescription: 'Try The World is a company that sells subscription boxes of specialty foods from around the world. In the startup tradition of rapid prototyping, they were about to launch with an initial product but no brand, so I jumped in to create a logo, branding, packaging, and collateral for their first products. I also engaged a photographer and art-directed the product photos.',
 	    images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio2.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio3.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio4.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio5.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio6.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio7.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio8.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio9.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Try+The+World/TTW+Mockup+Portfolio12.jpg"]
 	  }, {
@@ -26317,8 +26269,8 @@
 	    tags: ['design'],
 	    title: 'Book cover for Alice Munro collection',
 	    subtitle: 'Too Much Happiness',
-	    shortDescription: 'This was a personal project, as Too Much Happiness is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand in Photoshop, and made the illustration for the back cover.',
-	    longDescription: 'This was a personal project, as Too Much Happiness is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand in Photoshop, and made the illustration for the back cover.',
+	    shortDescription: 'This was a personal project, as this collection is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand in Photoshop, and painted the illustration for the back cover.',
+	    longDescription: 'This was a personal project, as this collection is one of my favorite books. In creating the cover design, I drew each letter individually in watercolor, set the type by hand in Photoshop, and painted the illustration for the back cover.',
 	    images: ["https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Alice+Munro+book+cover/Alice+Munro+Front+for+Ipad.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Alice+Munro+book+cover/Alice+Munro+back+for+Ipad.jpg", "https://s3.amazonaws.com/julia-himmel-personal-site/Projects/Alice+Munro+book+cover/Alice+Munro+fo+iPad+Portfolio.jpg"]
 	  }]
 	};
