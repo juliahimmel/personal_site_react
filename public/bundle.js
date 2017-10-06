@@ -25852,7 +25852,7 @@
 	        React.createElement(
 	          'p',
 	          { className: 'intro-text' },
-	          'Designer and developer pairing a strong typographic sensibility and deep understanding of brand and identity systems with a steadfast commitment to user-centered design. Experienced in all aspects of the digital production/software development cycle.'
+	          'Designer pairing a strong typographic sensibility and deep understanding of brand and identity systems with a steadfast commitment to user-centered design. My experience developing for the web helps inform my design practice.'
 	        )
 	      ),
 	      React.createElement(SplashPageNav, null)
